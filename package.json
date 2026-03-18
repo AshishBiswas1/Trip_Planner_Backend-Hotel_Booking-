@@ -1,0 +1,21 @@
+{
+  "name": "trip_planner_backend-hotel_booking-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshishBiswas1/Trip_Planner_Backend-Hotel_Booking-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AshishBiswas1/Trip_Planner_Backend-Hotel_Booking-/issues"
+  },
+  "homepage": "https://github.com/AshishBiswas1/Trip_Planner_Backend-Hotel_Booking-#readme"
+}
