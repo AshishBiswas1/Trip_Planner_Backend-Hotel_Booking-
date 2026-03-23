@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/AshishBiswas1/Trip_Planner_Backend-Hotel_Booking-/issues"
   },
-  "homepage": "https://github.com/AshishBiswas1/Trip_Planner_Backend-Hotel_Booking-#readme"
+  "homepage": "https://github.com/AshishBiswas1/Trip_Planner_Backend-Hotel_Booking-#readme",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.3.1"
+  }
 }
