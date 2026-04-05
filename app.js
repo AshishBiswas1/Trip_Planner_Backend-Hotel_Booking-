@@ -2,12 +2,11 @@ const express = require('express');
 const globalErrorHandler = require('./controller/errorController');
 const cors = require('cors');
 const helmet = require('helmet');
-const { xss } = require('express-xss-sanitizer');
-const mongooseSanitizer = require('express-mongo-sanitize');
 const rateLimit = require('express-rate-limit');
 const morgan = require('morgan');
 
 const AppError = require('./util/appError');
+const userRouter = require('./router/userRouter');
 
 const app = express();
 
@@ -30,8 +29,8 @@ app.use(
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 
-app.use(xss());
-app.use(mongooseSanitizer());
+// Routes
+app.use('/api/v1/user', userRouter);
 
 app.all('/:splat', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
