@@ -7,6 +7,7 @@ const morgan = require('morgan');
 
 const AppError = require('./util/appError');
 const userRouter = require('./router/userRouter');
+const hotelRouter = require('./router/hotelRouter');
 
 const app = express();
 
@@ -31,7 +32,7 @@ app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 
 // Routes
 app.use('/api/v1/user', userRouter);
-
+app.use('/api/v1/hotel', hotelRouter);
 app.all('/:splat', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });

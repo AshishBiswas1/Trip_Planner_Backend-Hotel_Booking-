@@ -12,7 +12,7 @@ function filterObj(Obj, ...allowedFields) {
 }
 
 exports.getAllUsers = handler.getAll(User);
-exports.getUser = handler.getOne(User);
+exports.getUser = handler.getOne(User, null, 'id');
 exports.updateUser = handler.updateOne(User);
 exports.deleteUser = handler.deleteOne(User);
 
