@@ -24,7 +24,6 @@ const hotelSchema = new mongoose.Schema(
       }
     },
     images: [String],
-    pricePerNight: Number,
     rating: Number,
     totalReviews: Number,
     roomsAvailable: Number,
@@ -45,14 +44,7 @@ const hotelSchema = new mongoose.Schema(
 // --- PERFORMANCE INDEXING ---
 // Essential for fast "Get All" and "Single" fetches
 hotelSchema.index({ slug: 1 });
-hotelSchema.index({ pricePerNight: 1, rating: -1 });
 hotelSchema.index({ 'location.city': 1 });
-
-// --- VIRTUALS ---
-// These calculate data on-the-fly without storing it in the DB
-hotelSchema.virtual('formattedPrice').get(function () {
-  return `$${this.pricePerNight} per night`;
-});
 
 hotelSchema.virtual('isBookable').get(function () {
   return this.roomsAvailable > 0;
