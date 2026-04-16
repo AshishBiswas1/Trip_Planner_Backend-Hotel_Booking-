@@ -1,5 +1,7 @@
 const express = require('express');
 const hotelController = require('../controller/HotelController');
+const roomRouter = require('./roomRouter');
+const authController = require('../controller/authController');
 
 const router = express.Router();
 
@@ -9,5 +11,9 @@ router.route('/').get(hotelController.getAllHotels);
 
 // 2. Get a single hotel by slug
 router.route('/:slug').get(hotelController.getHotel);
+
+router.use(authController.protect); // Protect all routes below this middleware
+// --- Room ROUTES ---
+router.use('/:hotelId/rooms', roomRouter);
 
 module.exports = router;

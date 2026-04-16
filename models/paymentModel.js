@@ -56,6 +56,14 @@ const paymentSchema = new mongoose.Schema(
       type: String
     },
 
+    paymentLinkId: {
+      type: String
+    },
+
+    paymentOrderId: {
+      type: String
+    },
+
     failureReason: {
       type: String
     }
@@ -68,6 +76,9 @@ const paymentSchema = new mongoose.Schema(
 // Index for faster queries
 paymentSchema.index({ user: 1 });
 paymentSchema.index({ booking: 1 });
+paymentSchema.index({ paymentIntentId: 1 });
+paymentSchema.index({ paymentLinkId: 1 });
+paymentSchema.index({ paymentOrderId: 1 });
 
 const Payment = mongoose.model('Payment', paymentSchema);
 
