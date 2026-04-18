@@ -24,7 +24,4 @@ router
   .route('/book/:hotelId')
   .post(bookingController.createBooking, paymentController.createPayment);
 
-router.route('/:id/success').patch(bookingController.successBooking);
-router.route('/:id/failed').patch(bookingController.failedBooking);
-
 module.exports = router;

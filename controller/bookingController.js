@@ -1,4 +1,5 @@
 const Booking = require('../models/bookingModel');
+const Room = require('../models/roomModel');
 const Payment = require('../models/paymentModel');
 const catchAsync = require('../util/catchAsync');
 const AppError = require('../util/appError');
@@ -90,12 +91,57 @@ const verifyRazorpayWebhookSignature = (req) => {
   }
 };
 
+const addDaysToDate = (date, numberOfDays) => {
+  const result = new Date(date);
+  result.setDate(result.getDate() + numberOfDays);
+  return result;
+};
+
 exports.createBooking = catchAsync(async (req, res, next) => {
+  const numberOfDays = Number(req.body.numberOfDays);
+  const numberOfGuests = Number(req.body.numberOfGuests);
+  const checkInDate = new Date(req.body.checkInDate);
+
+  if (!Number.isInteger(numberOfDays) || numberOfDays < 1) {
+    return next(new AppError('Please provide a valid number of days.', 400));
+  }
+
+  if (!Number.isInteger(numberOfGuests) || numberOfGuests < 1) {
+    return next(new AppError('Please provide a valid number of guests.', 400));
+  }
+
+  if (Number.isNaN(checkInDate.getTime())) {
+    return next(new AppError('Please provide a valid check-in date.', 400));
+  }
+
+  const room = await Room.findById(req.body.roomId).select('capacity hotel');
+
+  if (!room) {
+    return next(new AppError('No room found with that ID.', 404));
+  }
+
+  if (String(room.hotel) !== String(req.params.hotelId)) {
+    return next(
+      new AppError('This room does not belong to the selected hotel.', 400)
+    );
+  }
+
+  if (numberOfGuests > room.capacity) {
+    return next(
+      new AppError(
+        'The room cannot hold the number of guests. Please book another room.',
+        400
+      )
+    );
+  }
+
+  const checkOutDate = addDaysToDate(checkInDate, numberOfDays);
+
   // 1) Prevent double-booking using our static method
   const isAvailable = await Booking.isRoomAvailable(
     req.body.roomId,
-    req.body.checkInDate,
-    req.body.checkOutDate
+    checkInDate,
+    checkOutDate
   );
 
   if (!isAvailable) {
@@ -109,10 +155,11 @@ exports.createBooking = catchAsync(async (req, res, next) => {
     user: req.user.id,
     hotel: req.params.hotelId,
     room: req.body.roomId,
-    trip: req.body.tripId,
-    checkInDate: req.body.checkInDate,
-    checkOutDate: req.body.checkOutDate,
-    numberOfGuests: req.body.numberOfGuests,
+    trip: req.body.tripId || undefined,
+    checkInDate,
+    checkOutDate,
+    numberOfDays,
+    numberOfGuests,
     status: 'pending',
     isPaid: false,
     specialRequests: req.body.specialRequests
@@ -120,23 +167,6 @@ exports.createBooking = catchAsync(async (req, res, next) => {
 
   req.booking = booking;
   return next();
-});
-
-exports.successBooking = catchAsync(async (req, res, next) => {
-  const booking = await Booking.findByIdAndUpdate(
-    req.params.id,
-    { status: 'confirmed', isPaid: true },
-    { returnDocument: 'after' }
-  );
-
-  if (!booking) {
-    return next(new AppError('No booking found with that ID', 404));
-  }
-
-  res.status(200).json({
-    status: 'success',
-    message: 'Booking confirmed and payment successful'
-  });
 });
 
 exports.webhookSuccessBooking = catchAsync(async (req, res, next) => {
@@ -157,22 +187,21 @@ exports.webhookSuccessBooking = catchAsync(async (req, res, next) => {
     });
   }
 
-  await Payment.findByIdAndUpdate(
-    payment._id,
-    {
-      status: 'completed',
-      transactionId: paymentId,
-      paymentLinkId:
-        req.body?.payload?.payment?.entity?.payment_link_id ||
-        req.body?.payload?.payment_link?.entity?.id ||
-        payment.paymentLinkId,
-      paymentOrderId:
-        req.body?.payload?.payment?.entity?.order_id || payment.paymentOrderId,
-      failureReason: undefined
-    },
-    { returnDocument: 'after', runValidators: true }
-  );
+  // Update payment using instance and save() to trigger pre/post-save middleware
+  payment.status = 'completed';
+  payment.transactionId = paymentId;
+  payment.paymentLinkId =
+    req.body?.payload?.payment?.entity?.payment_link_id ||
+    req.body?.payload?.payment_link?.entity?.id ||
+    payment.paymentLinkId;
+  payment.paymentOrderId =
+    req.body?.payload?.payment?.entity?.order_id || payment.paymentOrderId;
+  payment.failureReason = undefined;
 
+  await payment.save({ validateBeforeSave: false });
+  // Post-save middleware automatically updates payment status
+
+  // Explicitly update booking status and payment flag
   const booking = await Booking.findByIdAndUpdate(
     payment.booking,
     { status: 'confirmed', isPaid: true },
@@ -186,23 +215,6 @@ exports.webhookSuccessBooking = catchAsync(async (req, res, next) => {
   res.status(200).json({
     status: 'success',
     message: 'Webhook success processed'
-  });
-});
-
-exports.failedBooking = catchAsync(async (req, res, next) => {
-  const booking = await Booking.findByIdAndUpdate(
-    req.params.id,
-    { status: 'cancelled', isPaid: false },
-    { returnDocument: 'after' }
-  );
-
-  if (!booking) {
-    return next(new AppError('No booking found with that ID', 404));
-  }
-
-  res.status(200).json({
-    status: 'failed',
-    message: 'Booking cancelled and payment failed'
   });
 });
 
@@ -224,25 +236,25 @@ exports.webhookFailedBooking = catchAsync(async (req, res, next) => {
     });
   }
 
-  await Payment.findByIdAndUpdate(
-    payment._id,
-    {
-      status: 'failed',
-      transactionId: paymentId || payment.transactionId,
-      paymentLinkId:
-        req.body?.payload?.payment?.entity?.payment_link_id ||
-        req.body?.payload?.payment_link?.entity?.id ||
-        payment.paymentLinkId,
-      paymentOrderId:
-        req.body?.payload?.payment?.entity?.order_id || payment.paymentOrderId,
-      failureReason:
-        req.body?.payload?.payment?.entity?.error_description ||
-        req.body?.failureReason ||
-        'Payment failed'
-    },
-    { returnDocument: 'after', runValidators: true }
-  );
+  // Update payment using markAsFailed() instance method which internally calls save()
+  // to trigger pre/post-save middleware
+  const failureReason =
+    req.body?.payload?.payment?.entity?.error_description ||
+    req.body?.failureReason ||
+    'Payment failed';
 
+  payment.transactionId = paymentId || payment.transactionId;
+  payment.paymentLinkId =
+    req.body?.payload?.payment?.entity?.payment_link_id ||
+    req.body?.payload?.payment_link?.entity?.id ||
+    payment.paymentLinkId;
+  payment.paymentOrderId =
+    req.body?.payload?.payment?.entity?.order_id || payment.paymentOrderId;
+
+  await payment.markAsFailed(failureReason);
+  // Post-save middleware automatically updates payment status
+
+  // Explicitly update booking status and payment flag
   const booking = await Booking.findByIdAndUpdate(
     payment.booking,
     { status: 'cancelled', isPaid: false },

@@ -10,8 +10,12 @@ const userRouter = require('./router/userRouter');
 const hotelRouter = require('./router/hotelRouter');
 const bookingRouter = require('./router/bookingRouter');
 const tripRouter = require('./router/tripRouter');
+const traverModeRouter = require('./router/traverModeRouter');
 
 const app = express();
+
+// Parse nested query params like rating[gte]=4 for combined filtering.
+app.set('query parser', 'extended');
 
 app.use(cors());
 app.use(helmet());
@@ -51,6 +55,7 @@ app.use('/api/v1/user', userRouter);
 app.use('/api/v1/hotel', hotelRouter);
 app.use('/api/v1/booking', bookingRouter);
 app.use('/api/v1/trip', tripRouter);
+app.use('/api/v1/travel', traverModeRouter);
 
 app.all('/:splat', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

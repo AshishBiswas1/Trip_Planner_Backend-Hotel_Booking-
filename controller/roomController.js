@@ -1,13 +1,23 @@
 const Room = require('../models/roomModel');
 const catchAsync = require('../util/catchAsync');
 const AppError = require('../util/appError');
+const apiFeatures = require('../util/apiFeatures');
 
 exports.getAllHotelRooms = catchAsync(async (req, res, next) => {
   if (!req.params.hotelId) {
     return next(new AppError('Hotel ID is required in route params', 400));
   }
 
-  const rooms = await Room.find({ hotel: req.params.hotelId });
+  const features = new apiFeatures(
+    Room.find({ hotel: req.params.hotelId }),
+    req.query
+  )
+    .filter()
+    .sort()
+    .limitFields()
+    .paginate();
+
+  const rooms = await features.query;
 
   if (!rooms) {
     return next(new AppError('No rooms found for this hotel', 404));

@@ -7,78 +7,122 @@ const paymentSchema = new mongoose.Schema(
       ref: 'User',
       required: true
     },
-
     booking: {
       type: mongoose.Schema.ObjectId,
       ref: 'Booking',
       required: true
     },
-
     hotel: {
       type: mongoose.Schema.ObjectId,
       ref: 'Hotel',
       required: true
     },
-
     room: {
       type: mongoose.Schema.ObjectId,
       ref: 'Room',
       required: true
     },
-
     amount: {
       type: Number,
       required: true
     },
-
     currency: {
       type: String,
       default: 'INR'
     },
-
     paymentMethod: {
       type: String,
       enum: ['card', 'upi', 'netbanking'],
       required: true
     },
-
     status: {
       type: String,
       enum: ['pending', 'completed', 'failed'],
       default: 'pending'
     },
-
-    transactionId: {
-      type: String
-    },
-
-    paymentIntentId: {
-      type: String
-    },
-
-    paymentLinkId: {
-      type: String
-    },
-
-    paymentOrderId: {
-      type: String
-    },
-
-    failureReason: {
-      type: String
-    }
+    transactionId: String,
+    paymentIntentId: String,
+    paymentLinkId: String,
+    paymentOrderId: String,
+    failureReason: String
   },
   {
-    timestamps: true
+    timestamps: true,
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true }
   }
 );
 
-// Index for faster queries
+// --- INDEXES ---
 paymentSchema.index({ user: 1 });
 paymentSchema.index({ booking: 1 });
-paymentSchema.index({ paymentIntentId: 1 });
-paymentSchema.index({ paymentLinkId: 1 });
-paymentSchema.index({ paymentOrderId: 1 });
+paymentSchema.index({ status: 1 });
+
+// --- PRE-SAVE MIDDLEWARE ---
+// Ensure amount is never negative and handle status-based logic before saving
+paymentSchema.pre('save', function () {
+  if (this.amount <= 0) {
+    throw new Error('Payment amount must be greater than zero.');
+  }
+
+  // Example: Auto-generate a transaction ID if completed but ID is missing
+  if (this.status === 'completed' && !this.transactionId) {
+    this.transactionId = `TXN-${this._id.toString().toUpperCase()}`;
+  }
+});
+
+// --- POST-SAVE MIDDLEWARE ---
+// Automatically update the associated Booking status when a payment is successful
+paymentSchema.post('save', async function (doc) {
+  try {
+    if (doc.status === 'completed') {
+      await mongoose.model('Booking').findByIdAndUpdate(doc.booking, {
+        paymentStatus: 'paid',
+        status: 'confirmed'
+      });
+    } else if (doc.status === 'failed') {
+      await mongoose.model('Booking').findByIdAndUpdate(doc.booking, {
+        paymentStatus: 'failed'
+      });
+    }
+  } catch (err) {
+    console.error('Error updating booking status after payment:', err);
+  }
+});
+
+// --- INSTANCE METHODS ---
+// Method to mark payment as failed with a reason
+paymentSchema.methods.markAsFailed = function (reason) {
+  this.status = 'failed';
+  this.failureReason = reason || 'Transaction declined';
+  return this.save();
+};
+
+// Method to verify if payment is successful
+paymentSchema.methods.isSuccessful = function () {
+  return this.status === 'completed';
+};
+
+// --- STATIC METHODS ---
+// Get total revenue for a specific hotel
+paymentSchema.statics.getTotalRevenueByHotel = async function (hotelId) {
+  const stats = await this.aggregate([
+    {
+      $match: {
+        hotel: new mongoose.Types.ObjectId(hotelId),
+        status: 'completed'
+      }
+    },
+    {
+      $group: {
+        _id: '$hotel',
+        totalAmount: { $sum: '$amount' },
+        count: { $sum: 1 }
+      }
+    }
+  ]);
+  return stats.length > 0 ? stats[0] : { totalAmount: 0, count: 0 };
+};
 
 const Payment = mongoose.model('Payment', paymentSchema);
 
