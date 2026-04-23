@@ -45,6 +45,7 @@ const hotelSchema = new mongoose.Schema(
 // Essential for fast "Get All" and "Single" fetches
 hotelSchema.index({ slug: 1 });
 hotelSchema.index({ 'location.city': 1 });
+hotelSchema.index({ 'location.coordinates': '2dsphere' });
 
 hotelSchema.virtual('isBookable').get(function () {
   return this.roomsAvailable > 0;

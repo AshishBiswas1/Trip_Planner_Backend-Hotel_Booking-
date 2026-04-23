@@ -9,6 +9,9 @@ const router = express.Router();
 // 1. Get all hotels
 router.route('/').get(hotelController.getAllHotels);
 
+// Get hotels by distance from a location
+router.route('/nearby').get(hotelController.getHotelByDistance);
+
 // 2. Get a single hotel by slug
 router.route('/:slug').get(hotelController.getHotel);
 

@@ -1,0 +1,1397 @@
+{
+    "flights": [
+        {
+            "flight_id": "6E-349",
+            "airline": "Vistara",
+            "route": [
+                "Jaipur",
+                "Hyderabad",
+                "Chandigarh",
+                "Patna",
+                "Haridwar"
+            ],
+            "base_price_per_leg": 3260,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "6E-409",
+            "airline": "IndiGo",
+            "route": [
+                "Kochi",
+                "Ahmedabad",
+                "Haridwar",
+                "Chennai"
+            ],
+            "base_price_per_leg": 4018,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "SG-551",
+            "airline": "Air India",
+            "route": [
+                "Pune",
+                "Chennai",
+                "Haridwar",
+                "Jaipur"
+            ],
+            "base_price_per_leg": 3249,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "SG-245",
+            "airline": "Vistara",
+            "route": [
+                "Bangalore",
+                "Pune",
+                "Kolkata",
+                "Chennai",
+                "Haridwar"
+            ],
+            "base_price_per_leg": 3382,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "AI-944",
+            "airline": "IndiGo",
+            "route": [
+                "Chennai",
+                "Ahmedabad",
+                "Pune",
+                "Dehradun",
+                "Mumbai"
+            ],
+            "base_price_per_leg": 2655,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "SG-433",
+            "airline": "Vistara",
+            "route": [
+                "Mumbai",
+                "Haridwar",
+                "Dehradun",
+                "Bangalore",
+                "Kochi"
+            ],
+            "base_price_per_leg": 3611,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "AI-915",
+            "airline": "Air India",
+            "route": [
+                "Chandigarh",
+                "Udaipur",
+                "Mumbai",
+                "Chennai",
+                "Rishikesh",
+                "Ahmedabad"
+            ],
+            "base_price_per_leg": 3614,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "UK-466",
+            "airline": "SpiceJet",
+            "route": [
+                "Mumbai",
+                "Jaipur",
+                "Pune",
+                "Chandigarh",
+                "Goa"
+            ],
+            "base_price_per_leg": 2500,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "6E-532",
+            "airline": "Vistara",
+            "route": [
+                "Goa",
+                "Patna",
+                "Pune",
+                "Delhi"
+            ],
+            "base_price_per_leg": 4427,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "SG-779",
+            "airline": "SpiceJet",
+            "route": [
+                "Bangalore",
+                "Kochi",
+                "Amritsar",
+                "Chandigarh",
+                "Delhi"
+            ],
+            "base_price_per_leg": 3221,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "UK-427",
+            "airline": "Vistara",
+            "route": [
+                "Goa",
+                "Chandigarh",
+                "Hyderabad",
+                "Patna",
+                "Rishikesh",
+                "Mumbai"
+            ],
+            "base_price_per_leg": 2920,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "AI-147",
+            "airline": "IndiGo",
+            "route": [
+                "Lucknow",
+                "Jaipur",
+                "Dehradun",
+                "Kochi"
+            ],
+            "base_price_per_leg": 2901,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "AI-324",
+            "airline": "IndiGo",
+            "route": [
+                "Chandigarh",
+                "Mumbai",
+                "Amritsar",
+                "Lucknow"
+            ],
+            "base_price_per_leg": 2882,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "UK-833",
+            "airline": "Air India",
+            "route": [
+                "Delhi",
+                "Ahmedabad",
+                "Haridwar",
+                "Chennai",
+                "Pune",
+                "Jaipur"
+            ],
+            "base_price_per_leg": 2834,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "6E-852",
+            "airline": "SpiceJet",
+            "route": [
+                "Kochi",
+                "Chennai",
+                "Bangalore",
+                "Hyderabad"
+            ],
+            "base_price_per_leg": 3798,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "AI-560",
+            "airline": "Vistara",
+            "route": [
+                "Delhi",
+                "Rishikesh",
+                "Jaipur",
+                "Amritsar",
+                "Bangalore"
+            ],
+            "base_price_per_leg": 4022,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "SG-518",
+            "airline": "Vistara",
+            "route": [
+                "Dehradun",
+                "Jaipur",
+                "Kochi",
+                "Chennai"
+            ],
+            "base_price_per_leg": 2609,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "SG-436",
+            "airline": "Vistara",
+            "route": [
+                "Goa",
+                "Agra",
+                "Chandigarh",
+                "Dehradun"
+            ],
+            "base_price_per_leg": 3308,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "AI-904",
+            "airline": "Air India",
+            "route": [
+                "Lucknow",
+                "Udaipur",
+                "Agra",
+                "Haridwar",
+                "Hyderabad",
+                "Chennai"
+            ],
+            "base_price_per_leg": 3115,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "SG-925",
+            "airline": "SpiceJet",
+            "route": [
+                "Delhi",
+                "Udaipur",
+                "Lucknow",
+                "Pune",
+                "Kochi",
+                "Bangalore"
+            ],
+            "base_price_per_leg": 3590,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "UK-200",
+            "airline": "IndiGo",
+            "route": [
+                "Udaipur",
+                "Haridwar",
+                "Delhi",
+                "Mumbai",
+                "Hyderabad",
+                "Rishikesh"
+            ],
+            "base_price_per_leg": 3981,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "AI-858",
+            "airline": "IndiGo",
+            "route": [
+                "Delhi",
+                "Lucknow",
+                "Haridwar",
+                "Udaipur",
+                "Rishikesh"
+            ],
+            "base_price_per_leg": 3123,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "AI-242",
+            "airline": "Vistara",
+            "route": [
+                "Pune",
+                "Chennai",
+                "Bangalore",
+                "Rishikesh",
+                "Goa",
+                "Patna"
+            ],
+            "base_price_per_leg": 3393,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "UK-931",
+            "airline": "Vistara",
+            "route": [
+                "Dehradun",
+                "Jaipur",
+                "Amritsar",
+                "Rishikesh"
+            ],
+            "base_price_per_leg": 3599,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "6E-800",
+            "airline": "SpiceJet",
+            "route": [
+                "Chandigarh",
+                "Patna",
+                "Kochi",
+                "Pune",
+                "Goa"
+            ],
+            "base_price_per_leg": 3864,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "UK-464",
+            "airline": "IndiGo",
+            "route": [
+                "Delhi",
+                "Mumbai",
+                "Pune",
+                "Ahmedabad"
+            ],
+            "base_price_per_leg": 4200,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "6E-571",
+            "airline": "IndiGo",
+            "route": [
+                "Ahmedabad",
+                "Amritsar",
+                "Rishikesh",
+                "Haridwar",
+                "Kochi",
+                "Kolkata"
+            ],
+            "base_price_per_leg": 4347,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "6E-174",
+            "airline": "Air India",
+            "route": [
+                "Kochi",
+                "Ahmedabad",
+                "Chandigarh",
+                "Udaipur",
+                "Haridwar",
+                "Hyderabad"
+            ],
+            "base_price_per_leg": 2842,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "6E-980",
+            "airline": "Vistara",
+            "route": [
+                "Kochi",
+                "Hyderabad",
+                "Lucknow",
+                "Kolkata",
+                "Chandigarh",
+                "Pune"
+            ],
+            "base_price_per_leg": 4051,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "UK-381",
+            "airline": "IndiGo",
+            "route": [
+                "Chennai",
+                "Udaipur",
+                "Mumbai",
+                "Patna"
+            ],
+            "base_price_per_leg": 3834,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "UK-705",
+            "airline": "SpiceJet",
+            "route": [
+                "Jaipur",
+                "Amritsar",
+                "Hyderabad",
+                "Chennai",
+                "Udaipur",
+                "Dehradun"
+            ],
+            "base_price_per_leg": 2820,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "SG-332",
+            "airline": "Air India",
+            "route": [
+                "Kochi",
+                "Rishikesh",
+                "Delhi",
+                "Lucknow",
+                "Mumbai"
+            ],
+            "base_price_per_leg": 3857,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "UK-219",
+            "airline": "Air India",
+            "route": [
+                "Kolkata",
+                "Agra",
+                "Kochi",
+                "Lucknow"
+            ],
+            "base_price_per_leg": 4117,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "SG-693",
+            "airline": "SpiceJet",
+            "route": [
+                "Mumbai",
+                "Goa",
+                "Pune",
+                "Patna",
+                "Dehradun"
+            ],
+            "base_price_per_leg": 2604,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "SG-195",
+            "airline": "Vistara",
+            "route": [
+                "Kochi",
+                "Pune",
+                "Goa",
+                "Chennai"
+            ],
+            "base_price_per_leg": 4488,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "SG-179",
+            "airline": "Vistara",
+            "route": [
+                "Chandigarh",
+                "Kolkata",
+                "Kochi",
+                "Delhi",
+                "Dehradun",
+                "Jaipur"
+            ],
+            "base_price_per_leg": 3149,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "UK-505",
+            "airline": "IndiGo",
+            "route": [
+                "Kolkata",
+                "Pune",
+                "Chandigarh",
+                "Kochi"
+            ],
+            "base_price_per_leg": 2866,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "AI-220",
+            "airline": "Air India",
+            "route": [
+                "Kochi",
+                "Dehradun",
+                "Patna",
+                "Rishikesh",
+                "Bangalore"
+            ],
+            "base_price_per_leg": 3773,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "AI-147",
+            "airline": "IndiGo",
+            "route": [
+                "Bangalore",
+                "Agra",
+                "Chandigarh",
+                "Delhi",
+                "Patna",
+                "Mumbai"
+            ],
+            "base_price_per_leg": 4490,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "UK-489",
+            "airline": "Air India",
+            "route": [
+                "Amritsar",
+                "Kochi",
+                "Jaipur",
+                "Agra",
+                "Hyderabad"
+            ],
+            "base_price_per_leg": 4431,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "6E-714",
+            "airline": "Air India",
+            "route": [
+                "Rishikesh",
+                "Chandigarh",
+                "Delhi",
+                "Agra"
+            ],
+            "base_price_per_leg": 3395,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "SG-608",
+            "airline": "Air India",
+            "route": [
+                "Jaipur",
+                "Lucknow",
+                "Kochi",
+                "Dehradun"
+            ],
+            "base_price_per_leg": 2884,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "UK-127",
+            "airline": "SpiceJet",
+            "route": [
+                "Rishikesh",
+                "Chandigarh",
+                "Amritsar",
+                "Dehradun"
+            ],
+            "base_price_per_leg": 3652,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "UK-634",
+            "airline": "IndiGo",
+            "route": [
+                "Dehradun",
+                "Amritsar",
+                "Jaipur",
+                "Ahmedabad"
+            ],
+            "base_price_per_leg": 3254,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "SG-453",
+            "airline": "IndiGo",
+            "route": [
+                "Udaipur",
+                "Patna",
+                "Jaipur",
+                "Mumbai",
+                "Lucknow"
+            ],
+            "base_price_per_leg": 2929,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "AI-967",
+            "airline": "IndiGo",
+            "route": [
+                "Mumbai",
+                "Jaipur",
+                "Kolkata",
+                "Udaipur",
+                "Kochi",
+                "Rishikesh"
+            ],
+            "base_price_per_leg": 3435,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "SG-367",
+            "airline": "SpiceJet",
+            "route": [
+                "Kochi",
+                "Delhi",
+                "Chennai",
+                "Udaipur",
+                "Pune",
+                "Ahmedabad"
+            ],
+            "base_price_per_leg": 3854,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "UK-823",
+            "airline": "IndiGo",
+            "route": [
+                "Goa",
+                "Kochi",
+                "Agra",
+                "Amritsar",
+                "Delhi"
+            ],
+            "base_price_per_leg": 4278,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "AI-172",
+            "airline": "Air India",
+            "route": [
+                "Patna",
+                "Dehradun",
+                "Goa",
+                "Udaipur",
+                "Lucknow"
+            ],
+            "base_price_per_leg": 4168,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "SG-213",
+            "airline": "Air India",
+            "route": [
+                "Rishikesh",
+                "Udaipur",
+                "Mumbai",
+                "Hyderabad"
+            ],
+            "base_price_per_leg": 3882,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "UK-690",
+            "airline": "SpiceJet",
+            "route": [
+                "Lucknow",
+                "Goa",
+                "Hyderabad",
+                "Udaipur"
+            ],
+            "base_price_per_leg": 4459,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "6E-602",
+            "airline": "IndiGo",
+            "route": [
+                "Jaipur",
+                "Kolkata",
+                "Dehradun",
+                "Udaipur",
+                "Bangalore"
+            ],
+            "base_price_per_leg": 4179,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "AI-619",
+            "airline": "Air India",
+            "route": [
+                "Udaipur",
+                "Patna",
+                "Pune",
+                "Jaipur",
+                "Delhi",
+                "Goa"
+            ],
+            "base_price_per_leg": 4267,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "SG-179",
+            "airline": "SpiceJet",
+            "route": [
+                "Mumbai",
+                "Chennai",
+                "Rishikesh",
+                "Udaipur",
+                "Kolkata",
+                "Chandigarh"
+            ],
+            "base_price_per_leg": 4196,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "6E-957",
+            "airline": "IndiGo",
+            "route": [
+                "Delhi",
+                "Jaipur",
+                "Kochi",
+                "Pune",
+                "Haridwar",
+                "Patna"
+            ],
+            "base_price_per_leg": 4167,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "AI-363",
+            "airline": "IndiGo",
+            "route": [
+                "Hyderabad",
+                "Rishikesh",
+                "Chandigarh",
+                "Bangalore"
+            ],
+            "base_price_per_leg": 3110,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "UK-246",
+            "airline": "Air India",
+            "route": [
+                "Jaipur",
+                "Udaipur",
+                "Patna",
+                "Ahmedabad"
+            ],
+            "base_price_per_leg": 3625,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "6E-359",
+            "airline": "IndiGo",
+            "route": [
+                "Agra",
+                "Dehradun",
+                "Lucknow",
+                "Kolkata",
+                "Jaipur"
+            ],
+            "base_price_per_leg": 4349,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "6E-519",
+            "airline": "Vistara",
+            "route": [
+                "Chennai",
+                "Kolkata",
+                "Hyderabad",
+                "Delhi"
+            ],
+            "base_price_per_leg": 2592,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "SG-966",
+            "airline": "Air India",
+            "route": [
+                "Hyderabad",
+                "Patna",
+                "Lucknow",
+                "Jaipur"
+            ],
+            "base_price_per_leg": 3090,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "6E-169",
+            "airline": "SpiceJet",
+            "route": [
+                "Jaipur",
+                "Udaipur",
+                "Pune",
+                "Hyderabad",
+                "Bangalore"
+            ],
+            "base_price_per_leg": 2528,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "UK-220",
+            "airline": "IndiGo",
+            "route": [
+                "Dehradun",
+                "Bangalore",
+                "Kolkata",
+                "Haridwar",
+                "Patna"
+            ],
+            "base_price_per_leg": 3238,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "AI-971",
+            "airline": "SpiceJet",
+            "route": [
+                "Chandigarh",
+                "Agra",
+                "Patna",
+                "Chennai"
+            ],
+            "base_price_per_leg": 3816,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "UK-343",
+            "airline": "Air India",
+            "route": [
+                "Patna",
+                "Bangalore",
+                "Kochi",
+                "Lucknow",
+                "Amritsar",
+                "Ahmedabad"
+            ],
+            "base_price_per_leg": 3766,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "AI-448",
+            "airline": "IndiGo",
+            "route": [
+                "Kochi",
+                "Chandigarh",
+                "Kolkata",
+                "Rishikesh"
+            ],
+            "base_price_per_leg": 4408,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "6E-420",
+            "airline": "IndiGo",
+            "route": [
+                "Pune",
+                "Chandigarh",
+                "Rishikesh",
+                "Kolkata",
+                "Jaipur",
+                "Haridwar"
+            ],
+            "base_price_per_leg": 2731,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "6E-485",
+            "airline": "Air India",
+            "route": [
+                "Kolkata",
+                "Hyderabad",
+                "Agra",
+                "Kochi"
+            ],
+            "base_price_per_leg": 4211,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "SG-505",
+            "airline": "IndiGo",
+            "route": [
+                "Bangalore",
+                "Lucknow",
+                "Agra",
+                "Kochi"
+            ],
+            "base_price_per_leg": 4116,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "AI-619",
+            "airline": "SpiceJet",
+            "route": [
+                "Agra",
+                "Mumbai",
+                "Udaipur",
+                "Haridwar",
+                "Delhi",
+                "Patna"
+            ],
+            "base_price_per_leg": 2754,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "UK-945",
+            "airline": "Air India",
+            "route": [
+                "Ahmedabad",
+                "Rishikesh",
+                "Haridwar",
+                "Agra",
+                "Lucknow"
+            ],
+            "base_price_per_leg": 3759,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "UK-638",
+            "airline": "SpiceJet",
+            "route": [
+                "Agra",
+                "Chennai",
+                "Rishikesh",
+                "Goa",
+                "Haridwar",
+                "Hyderabad"
+            ],
+            "base_price_per_leg": 3103,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "6E-178",
+            "airline": "SpiceJet",
+            "route": [
+                "Bangalore",
+                "Agra",
+                "Dehradun",
+                "Amritsar"
+            ],
+            "base_price_per_leg": 3568,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "AI-396",
+            "airline": "SpiceJet",
+            "route": [
+                "Dehradun",
+                "Bangalore",
+                "Hyderabad",
+                "Pune",
+                "Rishikesh",
+                "Kochi"
+            ],
+            "base_price_per_leg": 4099,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "UK-839",
+            "airline": "Air India",
+            "route": [
+                "Bangalore",
+                "Chennai",
+                "Delhi",
+                "Amritsar",
+                "Rishikesh"
+            ],
+            "base_price_per_leg": 3714,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "6E-549",
+            "airline": "Air India",
+            "route": [
+                "Hyderabad",
+                "Pune",
+                "Mumbai",
+                "Amritsar",
+                "Delhi"
+            ],
+            "base_price_per_leg": 2576,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "AI-289",
+            "airline": "Air India",
+            "route": [
+                "Lucknow",
+                "Dehradun",
+                "Mumbai",
+                "Ahmedabad",
+                "Agra"
+            ],
+            "base_price_per_leg": 3403,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "SG-886",
+            "airline": "IndiGo",
+            "route": [
+                "Kochi",
+                "Kolkata",
+                "Hyderabad",
+                "Haridwar",
+                "Goa"
+            ],
+            "base_price_per_leg": 2786,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "SG-853",
+            "airline": "SpiceJet",
+            "route": [
+                "Goa",
+                "Ahmedabad",
+                "Chandigarh",
+                "Kochi",
+                "Amritsar"
+            ],
+            "base_price_per_leg": 3936,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "SG-529",
+            "airline": "IndiGo",
+            "route": [
+                "Patna",
+                "Bangalore",
+                "Kolkata",
+                "Kochi"
+            ],
+            "base_price_per_leg": 3345,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "SG-942",
+            "airline": "IndiGo",
+            "route": [
+                "Patna",
+                "Haridwar",
+                "Hyderabad",
+                "Ahmedabad"
+            ],
+            "base_price_per_leg": 3390,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "6E-708",
+            "airline": "Air India",
+            "route": [
+                "Ahmedabad",
+                "Patna",
+                "Mumbai",
+                "Kochi",
+                "Pune"
+            ],
+            "base_price_per_leg": 2633,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "AI-638",
+            "airline": "Vistara",
+            "route": [
+                "Haridwar",
+                "Delhi",
+                "Ahmedabad",
+                "Jaipur",
+                "Udaipur",
+                "Lucknow"
+            ],
+            "base_price_per_leg": 4121,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "AI-762",
+            "airline": "IndiGo",
+            "route": [
+                "Agra",
+                "Lucknow",
+                "Kolkata",
+                "Dehradun",
+                "Rishikesh"
+            ],
+            "base_price_per_leg": 3310,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "UK-104",
+            "airline": "Vistara",
+            "route": [
+                "Haridwar",
+                "Chandigarh",
+                "Hyderabad",
+                "Amritsar",
+                "Dehradun",
+                "Patna"
+            ],
+            "base_price_per_leg": 3664,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "SG-416",
+            "airline": "Vistara",
+            "route": [
+                "Kolkata",
+                "Dehradun",
+                "Delhi",
+                "Udaipur",
+                "Kochi",
+                "Pune"
+            ],
+            "base_price_per_leg": 4280,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "SG-974",
+            "airline": "SpiceJet",
+            "route": [
+                "Agra",
+                "Rishikesh",
+                "Pune",
+                "Hyderabad",
+                "Bangalore",
+                "Chandigarh"
+            ],
+            "base_price_per_leg": 2635,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "SG-734",
+            "airline": "SpiceJet",
+            "route": [
+                "Mumbai",
+                "Haridwar",
+                "Dehradun",
+                "Kochi",
+                "Rishikesh",
+                "Goa"
+            ],
+            "base_price_per_leg": 2622,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "SG-299",
+            "airline": "Air India",
+            "route": [
+                "Dehradun",
+                "Udaipur",
+                "Amritsar",
+                "Lucknow",
+                "Delhi"
+            ],
+            "base_price_per_leg": 4121,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 3
+        },
+        {
+            "flight_id": "UK-939",
+            "airline": "IndiGo",
+            "route": [
+                "Chandigarh",
+                "Ahmedabad",
+                "Pune",
+                "Chennai"
+            ],
+            "base_price_per_leg": 3686,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "UK-255",
+            "airline": "SpiceJet",
+            "route": [
+                "Kolkata",
+                "Bangalore",
+                "Jaipur",
+                "Delhi",
+                "Lucknow",
+                "Pune"
+            ],
+            "base_price_per_leg": 4408,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "UK-428",
+            "airline": "IndiGo",
+            "route": [
+                "Rishikesh",
+                "Ahmedabad",
+                "Jaipur",
+                "Bangalore"
+            ],
+            "base_price_per_leg": 4168,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "UK-414",
+            "airline": "Air India",
+            "route": [
+                "Pune",
+                "Dehradun",
+                "Chandigarh",
+                "Goa",
+                "Rishikesh",
+                "Kolkata"
+            ],
+            "base_price_per_leg": 3973,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "SG-150",
+            "airline": "Air India",
+            "route": [
+                "Rishikesh",
+                "Jaipur",
+                "Patna",
+                "Delhi",
+                "Goa",
+                "Dehradun"
+            ],
+            "base_price_per_leg": 4436,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "6E-151",
+            "airline": "IndiGo",
+            "route": [
+                "Kolkata",
+                "Pune",
+                "Mumbai",
+                "Haridwar",
+                "Chandigarh",
+                "Rishikesh"
+            ],
+            "base_price_per_leg": 2834,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 4
+        },
+        {
+            "flight_id": "SG-496",
+            "airline": "Air India",
+            "route": [
+                "Chennai",
+                "Patna",
+                "Bangalore",
+                "Rishikesh"
+            ],
+            "base_price_per_leg": 4063,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "UK-580",
+            "airline": "SpiceJet",
+            "route": [
+                "Jaipur",
+                "Dehradun",
+                "Lucknow",
+                "Hyderabad"
+            ],
+            "base_price_per_leg": 3785,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "SG-457",
+            "airline": "Air India",
+            "route": [
+                "Patna",
+                "Jaipur",
+                "Bangalore",
+                "Pune"
+            ],
+            "base_price_per_leg": 2809,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "AI-448",
+            "airline": "SpiceJet",
+            "route": [
+                "Jaipur",
+                "Mumbai",
+                "Chandigarh",
+                "Kolkata"
+            ],
+            "base_price_per_leg": 2725,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "6E-203",
+            "airline": "IndiGo",
+            "route": [
+                "Patna",
+                "Agra",
+                "Kolkata",
+                "Delhi"
+            ],
+            "base_price_per_leg": 2598,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        },
+        {
+            "flight_id": "UK-942",
+            "airline": "IndiGo",
+            "route": [
+                "Patna",
+                "Bangalore",
+                "Kochi",
+                "Chennai"
+            ],
+            "base_price_per_leg": 3845,
+            "departure": "2026-05-15T10:00:00",
+            "stops": 2
+        }
+    ]
+}

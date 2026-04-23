@@ -1,0 +1,5264 @@
+{
+    "buses": [
+        {
+            "bus_id": "BUS-4441",
+            "operator": "Orange Travels",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Kolkata",
+            "source_departure_time": "16:45",
+            "destination_city": "Udaipur",
+            "destination_arrival_time": "05:48",
+            "full_route": [
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "START",
+                    "departure_time": "16:45",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "19:54",
+                    "departure_time": "20:04",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "23:32",
+                    "departure_time": "23:42",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "02:12",
+                    "departure_time": "02:22",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "05:48",
+                    "departure_time": "05:58",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 290,
+            "total_seats": 40,
+            "available_seats": 27,
+            "rating": 4.5,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-2145",
+            "operator": "IntrCity",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Kochi",
+            "source_departure_time": "20:10",
+            "destination_city": "Bangalore",
+            "destination_arrival_time": "10:35",
+            "full_route": [
+                {
+                    "station": "Kochi",
+                    "arrival_time": "START",
+                    "departure_time": "20:10",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "22:31",
+                    "departure_time": "22:41",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "02:30",
+                    "departure_time": "02:40",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "05:03",
+                    "departure_time": "05:13",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "07:34",
+                    "departure_time": "07:44",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "10:35",
+                    "departure_time": "10:45",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 335,
+            "total_seats": 40,
+            "available_seats": 26,
+            "rating": 4.9,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-6104",
+            "operator": "Zingbus",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Rishikesh",
+            "source_departure_time": "00:46",
+            "destination_city": "Udaipur",
+            "destination_arrival_time": "19:18",
+            "full_route": [
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "START",
+                    "departure_time": "00:46",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "04:16",
+                    "departure_time": "04:26",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "08:00",
+                    "departure_time": "08:10",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "12:00",
+                    "departure_time": "12:10",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "15:22",
+                    "departure_time": "15:32",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "19:18",
+                    "departure_time": "19:28",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 212,
+            "total_seats": 40,
+            "available_seats": 27,
+            "rating": 4.0,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-6536",
+            "operator": "RSRTC",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Kochi",
+            "source_departure_time": "01:34",
+            "destination_city": "Jaipur",
+            "destination_arrival_time": "13:32",
+            "full_route": [
+                {
+                    "station": "Kochi",
+                    "arrival_time": "START",
+                    "departure_time": "01:34",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "04:20",
+                    "departure_time": "04:30",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "07:07",
+                    "departure_time": "07:17",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "10:56",
+                    "departure_time": "11:06",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "13:32",
+                    "departure_time": "13:42",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 327,
+            "total_seats": 40,
+            "available_seats": 12,
+            "rating": 4.1,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-8451",
+            "operator": "Hans Travels",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Jaipur",
+            "source_departure_time": "05:29",
+            "destination_city": "Goa",
+            "destination_arrival_time": "18:32",
+            "full_route": [
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "START",
+                    "departure_time": "05:29",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "08:49",
+                    "departure_time": "08:59",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "12:38",
+                    "departure_time": "12:48",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "16:01",
+                    "departure_time": "16:11",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "18:32",
+                    "departure_time": "18:42",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 372,
+            "total_seats": 40,
+            "available_seats": 35,
+            "rating": 4.2,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5920",
+            "operator": "Hans Travels",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Delhi",
+            "source_departure_time": "15:04",
+            "destination_city": "Ahmedabad",
+            "destination_arrival_time": "07:29",
+            "full_route": [
+                {
+                    "station": "Delhi",
+                    "arrival_time": "START",
+                    "departure_time": "15:04",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "17:25",
+                    "departure_time": "17:35",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "21:09",
+                    "departure_time": "21:19",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "00:33",
+                    "departure_time": "00:43",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "04:32",
+                    "departure_time": "04:42",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "07:29",
+                    "departure_time": "07:39",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 384,
+            "total_seats": 40,
+            "available_seats": 35,
+            "rating": 4.0,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-2921",
+            "operator": "Orange Travels",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Pune",
+            "source_departure_time": "10:57",
+            "destination_city": "Kolkata",
+            "destination_arrival_time": "21:49",
+            "full_route": [
+                {
+                    "station": "Pune",
+                    "arrival_time": "START",
+                    "departure_time": "10:57",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "14:24",
+                    "departure_time": "14:34",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "18:16",
+                    "departure_time": "18:26",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "21:49",
+                    "departure_time": "21:59",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 367,
+            "total_seats": 40,
+            "available_seats": 36,
+            "rating": 4.6,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-6532",
+            "operator": "Orange Travels",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Patna",
+            "source_departure_time": "15:26",
+            "destination_city": "Amritsar",
+            "destination_arrival_time": "08:28",
+            "full_route": [
+                {
+                    "station": "Patna",
+                    "arrival_time": "START",
+                    "departure_time": "15:26",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "19:00",
+                    "departure_time": "19:10",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "22:56",
+                    "departure_time": "23:06",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "02:01",
+                    "departure_time": "02:11",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "05:48",
+                    "departure_time": "05:58",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "08:28",
+                    "departure_time": "08:38",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 351,
+            "total_seats": 40,
+            "available_seats": 30,
+            "rating": 4.7,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-9232",
+            "operator": "RSRTC",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Amritsar",
+            "source_departure_time": "15:50",
+            "destination_city": "Jaipur",
+            "destination_arrival_time": "02:51",
+            "full_route": [
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "START",
+                    "departure_time": "15:50",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "19:25",
+                    "departure_time": "19:35",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "23:09",
+                    "departure_time": "23:19",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "02:51",
+                    "departure_time": "03:01",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 365,
+            "total_seats": 40,
+            "available_seats": 37,
+            "rating": 4.7,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-4387",
+            "operator": "UTC",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Jaipur",
+            "source_departure_time": "15:59",
+            "destination_city": "Haridwar",
+            "destination_arrival_time": "00:04",
+            "full_route": [
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "START",
+                    "departure_time": "15:59",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "18:48",
+                    "departure_time": "18:58",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "21:29",
+                    "departure_time": "21:39",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "00:04",
+                    "departure_time": "00:14",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 276,
+            "total_seats": 40,
+            "available_seats": 19,
+            "rating": 4.3,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-1558",
+            "operator": "RSRTC",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Ahmedabad",
+            "source_departure_time": "02:41",
+            "destination_city": "Hyderabad",
+            "destination_arrival_time": "19:04",
+            "full_route": [
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "START",
+                    "departure_time": "02:41",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "05:49",
+                    "departure_time": "05:59",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "08:36",
+                    "departure_time": "08:46",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "11:57",
+                    "departure_time": "12:07",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "15:38",
+                    "departure_time": "15:48",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "19:04",
+                    "departure_time": "19:14",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 431,
+            "total_seats": 40,
+            "available_seats": 30,
+            "rating": 4.3,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5903",
+            "operator": "IntrCity",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Pune",
+            "source_departure_time": "15:35",
+            "destination_city": "Patna",
+            "destination_arrival_time": "09:17",
+            "full_route": [
+                {
+                    "station": "Pune",
+                    "arrival_time": "START",
+                    "departure_time": "15:35",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "18:44",
+                    "departure_time": "18:54",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "22:00",
+                    "departure_time": "22:10",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "01:56",
+                    "departure_time": "02:06",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "05:50",
+                    "departure_time": "06:00",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "09:17",
+                    "departure_time": "09:27",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 421,
+            "total_seats": 40,
+            "available_seats": 14,
+            "rating": 4.3,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-1310",
+            "operator": "Orange Travels",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Udaipur",
+            "source_departure_time": "00:45",
+            "destination_city": "Chandigarh",
+            "destination_arrival_time": "17:37",
+            "full_route": [
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "START",
+                    "departure_time": "00:45",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "03:28",
+                    "departure_time": "03:38",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "07:23",
+                    "departure_time": "07:33",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "10:42",
+                    "departure_time": "10:52",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "13:47",
+                    "departure_time": "13:57",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "17:37",
+                    "departure_time": "17:47",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 256,
+            "total_seats": 40,
+            "available_seats": 6,
+            "rating": 4.5,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-7794",
+            "operator": "Zingbus",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Amritsar",
+            "source_departure_time": "20:56",
+            "destination_city": "Bangalore",
+            "destination_arrival_time": "08:02",
+            "full_route": [
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "START",
+                    "departure_time": "20:56",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "00:34",
+                    "departure_time": "00:44",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "04:18",
+                    "departure_time": "04:28",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "08:02",
+                    "departure_time": "08:12",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 271,
+            "total_seats": 40,
+            "available_seats": 26,
+            "rating": 4.5,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-4895",
+            "operator": "Orange Travels",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Amritsar",
+            "source_departure_time": "13:29",
+            "destination_city": "Jaipur",
+            "destination_arrival_time": "07:19",
+            "full_route": [
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "START",
+                    "departure_time": "13:29",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "16:35",
+                    "departure_time": "16:45",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "20:33",
+                    "departure_time": "20:43",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "00:27",
+                    "departure_time": "00:37",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "04:26",
+                    "departure_time": "04:36",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "07:19",
+                    "departure_time": "07:29",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 311,
+            "total_seats": 40,
+            "available_seats": 7,
+            "rating": 4.2,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-2288",
+            "operator": "Zingbus",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Delhi",
+            "source_departure_time": "09:52",
+            "destination_city": "Agra",
+            "destination_arrival_time": "00:54",
+            "full_route": [
+                {
+                    "station": "Delhi",
+                    "arrival_time": "START",
+                    "departure_time": "09:52",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "12:25",
+                    "departure_time": "12:35",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "15:51",
+                    "departure_time": "16:01",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "19:00",
+                    "departure_time": "19:10",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "22:08",
+                    "departure_time": "22:18",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "00:54",
+                    "departure_time": "01:04",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 206,
+            "total_seats": 40,
+            "available_seats": 38,
+            "rating": 4.4,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-4839",
+            "operator": "Zingbus",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Jaipur",
+            "source_departure_time": "21:39",
+            "destination_city": "Kochi",
+            "destination_arrival_time": "15:21",
+            "full_route": [
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "START",
+                    "departure_time": "21:39",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "01:17",
+                    "departure_time": "01:27",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "04:55",
+                    "departure_time": "05:05",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "08:30",
+                    "departure_time": "08:40",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "12:24",
+                    "departure_time": "12:34",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "15:21",
+                    "departure_time": "15:31",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 388,
+            "total_seats": 40,
+            "available_seats": 12,
+            "rating": 4.4,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-9157",
+            "operator": "UTC",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Lucknow",
+            "source_departure_time": "11:47",
+            "destination_city": "Haridwar",
+            "destination_arrival_time": "02:58",
+            "full_route": [
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "START",
+                    "departure_time": "11:47",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "15:11",
+                    "departure_time": "15:21",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "18:16",
+                    "departure_time": "18:26",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "21:00",
+                    "departure_time": "21:10",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "00:00",
+                    "departure_time": "00:10",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "02:58",
+                    "departure_time": "03:08",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 300,
+            "total_seats": 40,
+            "available_seats": 5,
+            "rating": 4.0,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-8310",
+            "operator": "IntrCity",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Bangalore",
+            "source_departure_time": "14:40",
+            "destination_city": "Kolkata",
+            "destination_arrival_time": "04:17",
+            "full_route": [
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "START",
+                    "departure_time": "14:40",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "17:44",
+                    "departure_time": "17:54",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "21:37",
+                    "departure_time": "21:47",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "01:26",
+                    "departure_time": "01:36",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "04:17",
+                    "departure_time": "04:27",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 372,
+            "total_seats": 40,
+            "available_seats": 22,
+            "rating": 4.7,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-2407",
+            "operator": "RSRTC",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Delhi",
+            "source_departure_time": "10:12",
+            "destination_city": "Patna",
+            "destination_arrival_time": "22:41",
+            "full_route": [
+                {
+                    "station": "Delhi",
+                    "arrival_time": "START",
+                    "departure_time": "10:12",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "13:01",
+                    "departure_time": "13:11",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "16:43",
+                    "departure_time": "16:53",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "19:59",
+                    "departure_time": "20:09",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "22:41",
+                    "departure_time": "22:51",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 393,
+            "total_seats": 40,
+            "available_seats": 22,
+            "rating": 4.5,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-6296",
+            "operator": "IntrCity",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Amritsar",
+            "source_departure_time": "21:46",
+            "destination_city": "Haridwar",
+            "destination_arrival_time": "13:25",
+            "full_route": [
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "START",
+                    "departure_time": "21:46",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "00:07",
+                    "departure_time": "00:17",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "03:25",
+                    "departure_time": "03:35",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "07:05",
+                    "departure_time": "07:15",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "10:54",
+                    "departure_time": "11:04",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "13:25",
+                    "departure_time": "13:35",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 377,
+            "total_seats": 40,
+            "available_seats": 26,
+            "rating": 4.3,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5567",
+            "operator": "UTC",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Hyderabad",
+            "source_departure_time": "09:58",
+            "destination_city": "Agra",
+            "destination_arrival_time": "18:26",
+            "full_route": [
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "START",
+                    "departure_time": "09:58",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "12:39",
+                    "departure_time": "12:49",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "15:28",
+                    "departure_time": "15:38",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "18:26",
+                    "departure_time": "18:36",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 415,
+            "total_seats": 40,
+            "available_seats": 36,
+            "rating": 4.1,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5862",
+            "operator": "IntrCity",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Udaipur",
+            "source_departure_time": "17:15",
+            "destination_city": "Chennai",
+            "destination_arrival_time": "10:41",
+            "full_route": [
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "START",
+                    "departure_time": "17:15",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "20:38",
+                    "departure_time": "20:48",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "00:01",
+                    "departure_time": "00:11",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "03:04",
+                    "departure_time": "03:14",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "06:50",
+                    "departure_time": "07:00",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "10:41",
+                    "departure_time": "10:51",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 238,
+            "total_seats": 40,
+            "available_seats": 38,
+            "rating": 4.2,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5157",
+            "operator": "Hans Travels",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Udaipur",
+            "source_departure_time": "20:14",
+            "destination_city": "Dehradun",
+            "destination_arrival_time": "05:04",
+            "full_route": [
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "START",
+                    "departure_time": "20:14",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "23:21",
+                    "departure_time": "23:31",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "02:10",
+                    "departure_time": "02:20",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "05:04",
+                    "departure_time": "05:14",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 243,
+            "total_seats": 40,
+            "available_seats": 22,
+            "rating": 4.6,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-3874",
+            "operator": "IntrCity",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Agra",
+            "source_departure_time": "01:40",
+            "destination_city": "Kochi",
+            "destination_arrival_time": "11:05",
+            "full_route": [
+                {
+                    "station": "Agra",
+                    "arrival_time": "START",
+                    "departure_time": "01:40",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "05:26",
+                    "departure_time": "05:36",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "08:08",
+                    "departure_time": "08:18",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "11:05",
+                    "departure_time": "11:15",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 343,
+            "total_seats": 40,
+            "available_seats": 23,
+            "rating": 4.0,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-2154",
+            "operator": "IntrCity",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Hyderabad",
+            "source_departure_time": "00:29",
+            "destination_city": "Lucknow",
+            "destination_arrival_time": "17:49",
+            "full_route": [
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "START",
+                    "departure_time": "00:29",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "03:26",
+                    "departure_time": "03:36",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "07:21",
+                    "departure_time": "07:31",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "11:17",
+                    "departure_time": "11:27",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "13:54",
+                    "departure_time": "14:04",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "17:49",
+                    "departure_time": "17:59",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 246,
+            "total_seats": 40,
+            "available_seats": 23,
+            "rating": 4.7,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-4039",
+            "operator": "Zingbus",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Kochi",
+            "source_departure_time": "02:03",
+            "destination_city": "Patna",
+            "destination_arrival_time": "18:28",
+            "full_route": [
+                {
+                    "station": "Kochi",
+                    "arrival_time": "START",
+                    "departure_time": "02:03",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "05:47",
+                    "departure_time": "05:57",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "09:04",
+                    "departure_time": "09:14",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "13:02",
+                    "departure_time": "13:12",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "15:57",
+                    "departure_time": "16:07",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "18:28",
+                    "departure_time": "18:38",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 390,
+            "total_seats": 40,
+            "available_seats": 15,
+            "rating": 4.6,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-3542",
+            "operator": "Orange Travels",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Dehradun",
+            "source_departure_time": "22:01",
+            "destination_city": "Pune",
+            "destination_arrival_time": "13:32",
+            "full_route": [
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "START",
+                    "departure_time": "22:01",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "01:17",
+                    "departure_time": "01:27",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "04:24",
+                    "departure_time": "04:34",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "07:16",
+                    "departure_time": "07:26",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "10:07",
+                    "departure_time": "10:17",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "13:32",
+                    "departure_time": "13:42",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 267,
+            "total_seats": 40,
+            "available_seats": 29,
+            "rating": 4.3,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-1831",
+            "operator": "RSRTC",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Udaipur",
+            "source_departure_time": "18:42",
+            "destination_city": "Mumbai",
+            "destination_arrival_time": "10:37",
+            "full_route": [
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "START",
+                    "departure_time": "18:42",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "21:45",
+                    "departure_time": "21:55",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "00:51",
+                    "departure_time": "01:01",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "04:15",
+                    "departure_time": "04:25",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "07:14",
+                    "departure_time": "07:24",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "10:37",
+                    "departure_time": "10:47",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 265,
+            "total_seats": 40,
+            "available_seats": 28,
+            "rating": 4.9,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-9655",
+            "operator": "Hans Travels",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Patna",
+            "source_departure_time": "18:53",
+            "destination_city": "Amritsar",
+            "destination_arrival_time": "11:47",
+            "full_route": [
+                {
+                    "station": "Patna",
+                    "arrival_time": "START",
+                    "departure_time": "18:53",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "21:51",
+                    "departure_time": "22:01",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "01:51",
+                    "departure_time": "02:01",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "04:53",
+                    "departure_time": "05:03",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "08:00",
+                    "departure_time": "08:10",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "11:47",
+                    "departure_time": "11:57",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 382,
+            "total_seats": 40,
+            "available_seats": 9,
+            "rating": 3.9,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-9763",
+            "operator": "Zingbus",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Agra",
+            "source_departure_time": "06:33",
+            "destination_city": "Delhi",
+            "destination_arrival_time": "22:07",
+            "full_route": [
+                {
+                    "station": "Agra",
+                    "arrival_time": "START",
+                    "departure_time": "06:33",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "10:20",
+                    "departure_time": "10:30",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "12:56",
+                    "departure_time": "13:06",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "16:06",
+                    "departure_time": "16:16",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "19:17",
+                    "departure_time": "19:27",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "22:07",
+                    "departure_time": "22:17",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 222,
+            "total_seats": 40,
+            "available_seats": 33,
+            "rating": 4.2,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-4658",
+            "operator": "Zingbus",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Kolkata",
+            "source_departure_time": "06:07",
+            "destination_city": "Chandigarh",
+            "destination_arrival_time": "19:20",
+            "full_route": [
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "START",
+                    "departure_time": "06:07",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "09:06",
+                    "departure_time": "09:16",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "12:21",
+                    "departure_time": "12:31",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "16:18",
+                    "departure_time": "16:28",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "19:20",
+                    "departure_time": "19:30",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 236,
+            "total_seats": 40,
+            "available_seats": 3,
+            "rating": 4.4,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-3266",
+            "operator": "RSRTC",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Hyderabad",
+            "source_departure_time": "15:11",
+            "destination_city": "Mumbai",
+            "destination_arrival_time": "00:08",
+            "full_route": [
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "START",
+                    "departure_time": "15:11",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "18:27",
+                    "departure_time": "18:37",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "21:26",
+                    "departure_time": "21:36",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "00:08",
+                    "departure_time": "00:18",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 373,
+            "total_seats": 40,
+            "available_seats": 22,
+            "rating": 4.7,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-2633",
+            "operator": "Hans Travels",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Rishikesh",
+            "source_departure_time": "14:01",
+            "destination_city": "Ahmedabad",
+            "destination_arrival_time": "23:23",
+            "full_route": [
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "START",
+                    "departure_time": "14:01",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "16:46",
+                    "departure_time": "16:56",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "20:07",
+                    "departure_time": "20:17",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "23:23",
+                    "departure_time": "23:33",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 202,
+            "total_seats": 40,
+            "available_seats": 31,
+            "rating": 4.8,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-3076",
+            "operator": "IntrCity",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Lucknow",
+            "source_departure_time": "15:28",
+            "destination_city": "Amritsar",
+            "destination_arrival_time": "03:40",
+            "full_route": [
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "START",
+                    "departure_time": "15:28",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "18:10",
+                    "departure_time": "18:20",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "21:35",
+                    "departure_time": "21:45",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "00:11",
+                    "departure_time": "00:21",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "03:40",
+                    "departure_time": "03:50",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 331,
+            "total_seats": 40,
+            "available_seats": 12,
+            "rating": 4.5,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-8134",
+            "operator": "UTC",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Ahmedabad",
+            "source_departure_time": "22:15",
+            "destination_city": "Dehradun",
+            "destination_arrival_time": "06:57",
+            "full_route": [
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "START",
+                    "departure_time": "22:15",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "01:03",
+                    "departure_time": "01:13",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "03:48",
+                    "departure_time": "03:58",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "06:57",
+                    "departure_time": "07:07",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 240,
+            "total_seats": 40,
+            "available_seats": 35,
+            "rating": 4.0,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-1612",
+            "operator": "IntrCity",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Bangalore",
+            "source_departure_time": "01:53",
+            "destination_city": "Pune",
+            "destination_arrival_time": "16:53",
+            "full_route": [
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "START",
+                    "departure_time": "01:53",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "04:13",
+                    "departure_time": "04:23",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "07:08",
+                    "departure_time": "07:18",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "09:54",
+                    "departure_time": "10:04",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "12:54",
+                    "departure_time": "13:04",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "16:53",
+                    "departure_time": "17:03",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 363,
+            "total_seats": 40,
+            "available_seats": 4,
+            "rating": 4.3,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-3622",
+            "operator": "Hans Travels",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Udaipur",
+            "source_departure_time": "15:01",
+            "destination_city": "Amritsar",
+            "destination_arrival_time": "07:39",
+            "full_route": [
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "START",
+                    "departure_time": "15:01",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "17:30",
+                    "departure_time": "17:40",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "20:47",
+                    "departure_time": "20:57",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "00:06",
+                    "departure_time": "00:16",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "03:56",
+                    "departure_time": "04:06",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "07:39",
+                    "departure_time": "07:49",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 385,
+            "total_seats": 40,
+            "available_seats": 18,
+            "rating": 4.3,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-1074",
+            "operator": "UTC",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Kolkata",
+            "source_departure_time": "12:58",
+            "destination_city": "Ahmedabad",
+            "destination_arrival_time": "22:19",
+            "full_route": [
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "START",
+                    "departure_time": "12:58",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "15:27",
+                    "departure_time": "15:37",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "18:53",
+                    "departure_time": "19:03",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "22:19",
+                    "departure_time": "22:29",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 272,
+            "total_seats": 40,
+            "available_seats": 5,
+            "rating": 3.8,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-9458",
+            "operator": "Hans Travels",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Jaipur",
+            "source_departure_time": "10:43",
+            "destination_city": "Amritsar",
+            "destination_arrival_time": "19:33",
+            "full_route": [
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "START",
+                    "departure_time": "10:43",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "13:30",
+                    "departure_time": "13:40",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "17:03",
+                    "departure_time": "17:13",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "19:33",
+                    "departure_time": "19:43",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 292,
+            "total_seats": 40,
+            "available_seats": 23,
+            "rating": 4.0,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5286",
+            "operator": "UTC",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Dehradun",
+            "source_departure_time": "07:23",
+            "destination_city": "Bangalore",
+            "destination_arrival_time": "01:31",
+            "full_route": [
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "START",
+                    "departure_time": "07:23",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "11:03",
+                    "departure_time": "11:13",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "14:26",
+                    "departure_time": "14:36",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "18:21",
+                    "departure_time": "18:31",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "22:14",
+                    "departure_time": "22:24",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "01:31",
+                    "departure_time": "01:41",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 255,
+            "total_seats": 40,
+            "available_seats": 21,
+            "rating": 3.9,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-6909",
+            "operator": "UTC",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Kochi",
+            "source_departure_time": "02:41",
+            "destination_city": "Amritsar",
+            "destination_arrival_time": "18:30",
+            "full_route": [
+                {
+                    "station": "Kochi",
+                    "arrival_time": "START",
+                    "departure_time": "02:41",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "05:24",
+                    "departure_time": "05:34",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "08:15",
+                    "departure_time": "08:25",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "11:06",
+                    "departure_time": "11:16",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "14:55",
+                    "departure_time": "15:05",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "18:30",
+                    "departure_time": "18:40",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 323,
+            "total_seats": 40,
+            "available_seats": 37,
+            "rating": 4.1,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-3970",
+            "operator": "RSRTC",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Lucknow",
+            "source_departure_time": "19:41",
+            "destination_city": "Kochi",
+            "destination_arrival_time": "12:05",
+            "full_route": [
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "START",
+                    "departure_time": "19:41",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "22:49",
+                    "departure_time": "22:59",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "02:17",
+                    "departure_time": "02:27",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "05:04",
+                    "departure_time": "05:14",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "08:27",
+                    "departure_time": "08:37",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "12:05",
+                    "departure_time": "12:15",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 337,
+            "total_seats": 40,
+            "available_seats": 11,
+            "rating": 4.8,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5076",
+            "operator": "UTC",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Agra",
+            "source_departure_time": "08:20",
+            "destination_city": "Jaipur",
+            "destination_arrival_time": "18:39",
+            "full_route": [
+                {
+                    "station": "Agra",
+                    "arrival_time": "START",
+                    "departure_time": "08:20",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "11:55",
+                    "departure_time": "12:05",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "15:29",
+                    "departure_time": "15:39",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "18:39",
+                    "departure_time": "18:49",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 238,
+            "total_seats": 40,
+            "available_seats": 38,
+            "rating": 4.8,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-7165",
+            "operator": "Orange Travels",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Patna",
+            "source_departure_time": "14:05",
+            "destination_city": "Mumbai",
+            "destination_arrival_time": "06:43",
+            "full_route": [
+                {
+                    "station": "Patna",
+                    "arrival_time": "START",
+                    "departure_time": "14:05",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "16:37",
+                    "departure_time": "16:47",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "20:24",
+                    "departure_time": "20:34",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "00:22",
+                    "departure_time": "00:32",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "03:28",
+                    "departure_time": "03:38",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "06:43",
+                    "departure_time": "06:53",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 305,
+            "total_seats": 40,
+            "available_seats": 31,
+            "rating": 4.1,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-9253",
+            "operator": "Orange Travels",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Rishikesh",
+            "source_departure_time": "16:31",
+            "destination_city": "Jaipur",
+            "destination_arrival_time": "05:18",
+            "full_route": [
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "START",
+                    "departure_time": "16:31",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "19:57",
+                    "departure_time": "20:07",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "22:48",
+                    "departure_time": "22:58",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "02:17",
+                    "departure_time": "02:27",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "05:18",
+                    "departure_time": "05:28",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 357,
+            "total_seats": 40,
+            "available_seats": 8,
+            "rating": 4.3,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-2627",
+            "operator": "Orange Travels",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Ahmedabad",
+            "source_departure_time": "12:04",
+            "destination_city": "Udaipur",
+            "destination_arrival_time": "03:50",
+            "full_route": [
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "START",
+                    "departure_time": "12:04",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "14:38",
+                    "departure_time": "14:48",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "17:51",
+                    "departure_time": "18:01",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "20:48",
+                    "departure_time": "20:58",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "00:32",
+                    "departure_time": "00:42",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "03:50",
+                    "departure_time": "04:00",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 349,
+            "total_seats": 40,
+            "available_seats": 29,
+            "rating": 4.5,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-4302",
+            "operator": "UTC",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Ahmedabad",
+            "source_departure_time": "07:05",
+            "destination_city": "Lucknow",
+            "destination_arrival_time": "00:13",
+            "full_route": [
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "START",
+                    "departure_time": "07:05",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "10:10",
+                    "departure_time": "10:20",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "13:17",
+                    "departure_time": "13:27",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "16:49",
+                    "departure_time": "16:59",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "20:44",
+                    "departure_time": "20:54",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "00:13",
+                    "departure_time": "00:23",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 266,
+            "total_seats": 40,
+            "available_seats": 37,
+            "rating": 4.8,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-6831",
+            "operator": "RSRTC",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Amritsar",
+            "source_departure_time": "15:40",
+            "destination_city": "Dehradun",
+            "destination_arrival_time": "01:11",
+            "full_route": [
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "START",
+                    "departure_time": "15:40",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "19:25",
+                    "departure_time": "19:35",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "22:16",
+                    "departure_time": "22:26",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "01:11",
+                    "departure_time": "01:21",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 420,
+            "total_seats": 40,
+            "available_seats": 34,
+            "rating": 3.8,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-8139",
+            "operator": "UTC",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Mumbai",
+            "source_departure_time": "22:09",
+            "destination_city": "Rishikesh",
+            "destination_arrival_time": "08:05",
+            "full_route": [
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "START",
+                    "departure_time": "22:09",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "00:53",
+                    "departure_time": "01:03",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "04:12",
+                    "departure_time": "04:22",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "08:05",
+                    "departure_time": "08:15",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 449,
+            "total_seats": 40,
+            "available_seats": 17,
+            "rating": 4.3,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5690",
+            "operator": "IntrCity",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Agra",
+            "source_departure_time": "00:23",
+            "destination_city": "Udaipur",
+            "destination_arrival_time": "16:36",
+            "full_route": [
+                {
+                    "station": "Agra",
+                    "arrival_time": "START",
+                    "departure_time": "00:23",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "03:52",
+                    "departure_time": "04:02",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "06:54",
+                    "departure_time": "07:04",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "10:23",
+                    "departure_time": "10:33",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "13:44",
+                    "departure_time": "13:54",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "16:36",
+                    "departure_time": "16:46",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 313,
+            "total_seats": 40,
+            "available_seats": 20,
+            "rating": 4.2,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-7547",
+            "operator": "IntrCity",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Rishikesh",
+            "source_departure_time": "02:31",
+            "destination_city": "Delhi",
+            "destination_arrival_time": "15:23",
+            "full_route": [
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "START",
+                    "departure_time": "02:31",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "05:40",
+                    "departure_time": "05:50",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "08:15",
+                    "departure_time": "08:25",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "11:43",
+                    "departure_time": "11:53",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "15:23",
+                    "departure_time": "15:33",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 210,
+            "total_seats": 40,
+            "available_seats": 29,
+            "rating": 4.1,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-3450",
+            "operator": "RSRTC",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Haridwar",
+            "source_departure_time": "23:42",
+            "destination_city": "Lucknow",
+            "destination_arrival_time": "08:28",
+            "full_route": [
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "START",
+                    "departure_time": "23:42",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "02:50",
+                    "departure_time": "03:00",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "05:25",
+                    "departure_time": "05:35",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "08:28",
+                    "departure_time": "08:38",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 300,
+            "total_seats": 40,
+            "available_seats": 34,
+            "rating": 4.7,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-2951",
+            "operator": "Orange Travels",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Pune",
+            "source_departure_time": "15:47",
+            "destination_city": "Mumbai",
+            "destination_arrival_time": "04:30",
+            "full_route": [
+                {
+                    "station": "Pune",
+                    "arrival_time": "START",
+                    "departure_time": "15:47",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "19:19",
+                    "departure_time": "19:29",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "22:58",
+                    "departure_time": "23:08",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "01:42",
+                    "departure_time": "01:52",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "04:30",
+                    "departure_time": "04:40",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 278,
+            "total_seats": 40,
+            "available_seats": 8,
+            "rating": 3.9,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-3470",
+            "operator": "Orange Travels",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Mumbai",
+            "source_departure_time": "03:07",
+            "destination_city": "Haridwar",
+            "destination_arrival_time": "12:29",
+            "full_route": [
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "START",
+                    "departure_time": "03:07",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "06:21",
+                    "departure_time": "06:31",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "09:53",
+                    "departure_time": "10:03",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "12:29",
+                    "departure_time": "12:39",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 381,
+            "total_seats": 40,
+            "available_seats": 13,
+            "rating": 4.6,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5296",
+            "operator": "Orange Travels",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Chandigarh",
+            "source_departure_time": "17:03",
+            "destination_city": "Kolkata",
+            "destination_arrival_time": "00:43",
+            "full_route": [
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "START",
+                    "departure_time": "17:03",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "19:30",
+                    "departure_time": "19:40",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "22:09",
+                    "departure_time": "22:19",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "00:43",
+                    "departure_time": "00:53",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 243,
+            "total_seats": 40,
+            "available_seats": 3,
+            "rating": 4.5,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-3332",
+            "operator": "Orange Travels",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Lucknow",
+            "source_departure_time": "03:53",
+            "destination_city": "Mumbai",
+            "destination_arrival_time": "20:05",
+            "full_route": [
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "START",
+                    "departure_time": "03:53",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "07:04",
+                    "departure_time": "07:14",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "10:58",
+                    "departure_time": "11:08",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "14:16",
+                    "departure_time": "14:26",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "17:22",
+                    "departure_time": "17:32",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "20:05",
+                    "departure_time": "20:15",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 444,
+            "total_seats": 40,
+            "available_seats": 20,
+            "rating": 4.2,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-2073",
+            "operator": "RSRTC",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Chandigarh",
+            "source_departure_time": "22:29",
+            "destination_city": "Goa",
+            "destination_arrival_time": "10:31",
+            "full_route": [
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "START",
+                    "departure_time": "22:29",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "01:40",
+                    "departure_time": "01:50",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "05:02",
+                    "departure_time": "05:12",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "07:51",
+                    "departure_time": "08:01",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "10:31",
+                    "departure_time": "10:41",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 328,
+            "total_seats": 40,
+            "available_seats": 14,
+            "rating": 4.7,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-9311",
+            "operator": "IntrCity",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Kolkata",
+            "source_departure_time": "00:19",
+            "destination_city": "Haridwar",
+            "destination_arrival_time": "13:29",
+            "full_route": [
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "START",
+                    "departure_time": "00:19",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "03:00",
+                    "departure_time": "03:10",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "06:44",
+                    "departure_time": "06:54",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "10:26",
+                    "departure_time": "10:36",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "13:29",
+                    "departure_time": "13:39",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 298,
+            "total_seats": 40,
+            "available_seats": 16,
+            "rating": 4.6,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-6668",
+            "operator": "UTC",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Haridwar",
+            "source_departure_time": "17:08",
+            "destination_city": "Udaipur",
+            "destination_arrival_time": "06:16",
+            "full_route": [
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "START",
+                    "departure_time": "17:08",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "19:51",
+                    "departure_time": "20:01",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "23:42",
+                    "departure_time": "23:52",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "03:05",
+                    "departure_time": "03:15",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "06:16",
+                    "departure_time": "06:26",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 249,
+            "total_seats": 40,
+            "available_seats": 23,
+            "rating": 4.5,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5280",
+            "operator": "RSRTC",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Hyderabad",
+            "source_departure_time": "04:26",
+            "destination_city": "Agra",
+            "destination_arrival_time": "18:54",
+            "full_route": [
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "START",
+                    "departure_time": "04:26",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "08:09",
+                    "departure_time": "08:19",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "11:50",
+                    "departure_time": "12:00",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "15:08",
+                    "departure_time": "15:18",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "18:54",
+                    "departure_time": "19:04",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 368,
+            "total_seats": 40,
+            "available_seats": 10,
+            "rating": 3.9,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5832",
+            "operator": "Hans Travels",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Rishikesh",
+            "source_departure_time": "15:17",
+            "destination_city": "Hyderabad",
+            "destination_arrival_time": "01:05",
+            "full_route": [
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "START",
+                    "departure_time": "15:17",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "18:40",
+                    "departure_time": "18:50",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "21:16",
+                    "departure_time": "21:26",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "01:05",
+                    "departure_time": "01:15",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 282,
+            "total_seats": 40,
+            "available_seats": 16,
+            "rating": 4.0,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-6701",
+            "operator": "Hans Travels",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Jaipur",
+            "source_departure_time": "06:31",
+            "destination_city": "Bangalore",
+            "destination_arrival_time": "15:56",
+            "full_route": [
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "START",
+                    "departure_time": "06:31",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "09:14",
+                    "departure_time": "09:24",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "12:48",
+                    "departure_time": "12:58",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "15:56",
+                    "departure_time": "16:06",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 394,
+            "total_seats": 40,
+            "available_seats": 26,
+            "rating": 4.7,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-7346",
+            "operator": "RSRTC",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Udaipur",
+            "source_departure_time": "21:23",
+            "destination_city": "Delhi",
+            "destination_arrival_time": "15:06",
+            "full_route": [
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "START",
+                    "departure_time": "21:23",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "00:44",
+                    "departure_time": "00:54",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "04:42",
+                    "departure_time": "04:52",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "08:34",
+                    "departure_time": "08:44",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "12:07",
+                    "departure_time": "12:17",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "15:06",
+                    "departure_time": "15:16",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 359,
+            "total_seats": 40,
+            "available_seats": 4,
+            "rating": 4.2,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-4194",
+            "operator": "RSRTC",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Kolkata",
+            "source_departure_time": "14:38",
+            "destination_city": "Mumbai",
+            "destination_arrival_time": "02:04",
+            "full_route": [
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "START",
+                    "departure_time": "14:38",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "17:23",
+                    "departure_time": "17:33",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "20:26",
+                    "departure_time": "20:36",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "22:57",
+                    "departure_time": "23:07",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "02:04",
+                    "departure_time": "02:14",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 247,
+            "total_seats": 40,
+            "available_seats": 9,
+            "rating": 4.2,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-1458",
+            "operator": "Zingbus",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Haridwar",
+            "source_departure_time": "22:35",
+            "destination_city": "Amritsar",
+            "destination_arrival_time": "06:58",
+            "full_route": [
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "START",
+                    "departure_time": "22:35",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "00:59",
+                    "departure_time": "01:09",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "04:21",
+                    "departure_time": "04:31",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "06:58",
+                    "departure_time": "07:08",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 380,
+            "total_seats": 40,
+            "available_seats": 6,
+            "rating": 4.6,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-8627",
+            "operator": "IntrCity",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Agra",
+            "source_departure_time": "00:50",
+            "destination_city": "Lucknow",
+            "destination_arrival_time": "15:42",
+            "full_route": [
+                {
+                    "station": "Agra",
+                    "arrival_time": "START",
+                    "departure_time": "00:50",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "03:51",
+                    "departure_time": "04:01",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "06:29",
+                    "departure_time": "06:39",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "09:01",
+                    "departure_time": "09:11",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "12:18",
+                    "departure_time": "12:28",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "15:42",
+                    "departure_time": "15:52",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 323,
+            "total_seats": 40,
+            "available_seats": 26,
+            "rating": 3.9,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-3308",
+            "operator": "UTC",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Patna",
+            "source_departure_time": "19:42",
+            "destination_city": "Mumbai",
+            "destination_arrival_time": "12:13",
+            "full_route": [
+                {
+                    "station": "Patna",
+                    "arrival_time": "START",
+                    "departure_time": "19:42",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "23:08",
+                    "departure_time": "23:18",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "01:53",
+                    "departure_time": "02:03",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "05:44",
+                    "departure_time": "05:54",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "09:22",
+                    "departure_time": "09:32",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "12:13",
+                    "departure_time": "12:23",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 399,
+            "total_seats": 40,
+            "available_seats": 16,
+            "rating": 4.4,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-8036",
+            "operator": "Orange Travels",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Dehradun",
+            "source_departure_time": "20:39",
+            "destination_city": "Amritsar",
+            "destination_arrival_time": "13:33",
+            "full_route": [
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "START",
+                    "departure_time": "20:39",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "00:19",
+                    "departure_time": "00:29",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "04:17",
+                    "departure_time": "04:27",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "07:30",
+                    "departure_time": "07:40",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "10:20",
+                    "departure_time": "10:30",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "13:33",
+                    "departure_time": "13:43",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 369,
+            "total_seats": 40,
+            "available_seats": 6,
+            "rating": 4.2,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-3548",
+            "operator": "Hans Travels",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Udaipur",
+            "source_departure_time": "05:23",
+            "destination_city": "Pune",
+            "destination_arrival_time": "22:45",
+            "full_route": [
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "START",
+                    "departure_time": "05:23",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "09:03",
+                    "departure_time": "09:13",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "12:29",
+                    "departure_time": "12:39",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "15:49",
+                    "departure_time": "15:59",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "19:16",
+                    "departure_time": "19:26",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "22:45",
+                    "departure_time": "22:55",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 332,
+            "total_seats": 40,
+            "available_seats": 31,
+            "rating": 4.8,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-8387",
+            "operator": "Zingbus",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Bangalore",
+            "source_departure_time": "11:11",
+            "destination_city": "Lucknow",
+            "destination_arrival_time": "22:55",
+            "full_route": [
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "START",
+                    "departure_time": "11:11",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "13:35",
+                    "departure_time": "13:45",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "16:50",
+                    "departure_time": "17:00",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "19:23",
+                    "departure_time": "19:33",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "22:55",
+                    "departure_time": "23:05",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 232,
+            "total_seats": 40,
+            "available_seats": 16,
+            "rating": 4.0,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-1331",
+            "operator": "Orange Travels",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Chandigarh",
+            "source_departure_time": "19:36",
+            "destination_city": "Delhi",
+            "destination_arrival_time": "07:52",
+            "full_route": [
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "START",
+                    "departure_time": "19:36",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "22:15",
+                    "departure_time": "22:25",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "01:02",
+                    "departure_time": "01:12",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "04:18",
+                    "departure_time": "04:28",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "07:52",
+                    "departure_time": "08:02",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 376,
+            "total_seats": 40,
+            "available_seats": 6,
+            "rating": 4.9,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-7285",
+            "operator": "IntrCity",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Goa",
+            "source_departure_time": "05:32",
+            "destination_city": "Bangalore",
+            "destination_arrival_time": "17:29",
+            "full_route": [
+                {
+                    "station": "Goa",
+                    "arrival_time": "START",
+                    "departure_time": "05:32",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "08:55",
+                    "departure_time": "09:05",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "12:01",
+                    "departure_time": "12:11",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "14:40",
+                    "departure_time": "14:50",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "17:29",
+                    "departure_time": "17:39",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 307,
+            "total_seats": 40,
+            "available_seats": 28,
+            "rating": 4.5,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5685",
+            "operator": "Hans Travels",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Lucknow",
+            "source_departure_time": "21:48",
+            "destination_city": "Udaipur",
+            "destination_arrival_time": "07:47",
+            "full_route": [
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "START",
+                    "departure_time": "21:48",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "00:37",
+                    "departure_time": "00:47",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "04:33",
+                    "departure_time": "04:43",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "07:47",
+                    "departure_time": "07:57",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 402,
+            "total_seats": 40,
+            "available_seats": 11,
+            "rating": 4.3,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-6197",
+            "operator": "Hans Travels",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Hyderabad",
+            "source_departure_time": "05:21",
+            "destination_city": "Lucknow",
+            "destination_arrival_time": "22:25",
+            "full_route": [
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "START",
+                    "departure_time": "05:21",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "09:07",
+                    "departure_time": "09:17",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "13:06",
+                    "departure_time": "13:16",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "16:36",
+                    "departure_time": "16:46",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "19:50",
+                    "departure_time": "20:00",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "22:25",
+                    "departure_time": "22:35",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 337,
+            "total_seats": 40,
+            "available_seats": 13,
+            "rating": 4.3,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-3020",
+            "operator": "Hans Travels",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Kochi",
+            "source_departure_time": "12:19",
+            "destination_city": "Haridwar",
+            "destination_arrival_time": "01:44",
+            "full_route": [
+                {
+                    "station": "Kochi",
+                    "arrival_time": "START",
+                    "departure_time": "12:19",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "14:55",
+                    "departure_time": "15:05",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "18:51",
+                    "departure_time": "19:01",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "22:01",
+                    "departure_time": "22:11",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "01:44",
+                    "departure_time": "01:54",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 345,
+            "total_seats": 40,
+            "available_seats": 19,
+            "rating": 4.0,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-8471",
+            "operator": "Hans Travels",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Ahmedabad",
+            "source_departure_time": "06:11",
+            "destination_city": "Rishikesh",
+            "destination_arrival_time": "14:37",
+            "full_route": [
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "START",
+                    "departure_time": "06:11",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "08:37",
+                    "departure_time": "08:47",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "12:06",
+                    "departure_time": "12:16",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "14:37",
+                    "departure_time": "14:47",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 234,
+            "total_seats": 40,
+            "available_seats": 24,
+            "rating": 3.9,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-9759",
+            "operator": "RSRTC",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Hyderabad",
+            "source_departure_time": "04:19",
+            "destination_city": "Rishikesh",
+            "destination_arrival_time": "13:24",
+            "full_route": [
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "START",
+                    "departure_time": "04:19",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "07:14",
+                    "departure_time": "07:24",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "10:41",
+                    "departure_time": "10:51",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "13:24",
+                    "departure_time": "13:34",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 297,
+            "total_seats": 40,
+            "available_seats": 15,
+            "rating": 4.7,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-1410",
+            "operator": "RSRTC",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Haridwar",
+            "source_departure_time": "01:52",
+            "destination_city": "Pune",
+            "destination_arrival_time": "18:21",
+            "full_route": [
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "START",
+                    "departure_time": "01:52",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "04:52",
+                    "departure_time": "05:02",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "08:36",
+                    "departure_time": "08:46",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "11:19",
+                    "departure_time": "11:29",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "14:30",
+                    "departure_time": "14:40",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "18:21",
+                    "departure_time": "18:31",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 424,
+            "total_seats": 40,
+            "available_seats": 34,
+            "rating": 4.2,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5674",
+            "operator": "Zingbus",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Chandigarh",
+            "source_departure_time": "05:36",
+            "destination_city": "Patna",
+            "destination_arrival_time": "14:36",
+            "full_route": [
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "START",
+                    "departure_time": "05:36",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "07:57",
+                    "departure_time": "08:07",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "10:46",
+                    "departure_time": "10:56",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "14:36",
+                    "departure_time": "14:46",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 284,
+            "total_seats": 40,
+            "available_seats": 10,
+            "rating": 4.3,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-8764",
+            "operator": "UTC",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Chandigarh",
+            "source_departure_time": "10:38",
+            "destination_city": "Jaipur",
+            "destination_arrival_time": "03:24",
+            "full_route": [
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "START",
+                    "departure_time": "10:38",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "13:58",
+                    "departure_time": "14:08",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "17:12",
+                    "departure_time": "17:22",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "19:43",
+                    "departure_time": "19:53",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "23:34",
+                    "departure_time": "23:44",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "03:24",
+                    "departure_time": "03:34",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 420,
+            "total_seats": 40,
+            "available_seats": 16,
+            "rating": 4.2,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-2926",
+            "operator": "UTC",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Goa",
+            "source_departure_time": "17:36",
+            "destination_city": "Chennai",
+            "destination_arrival_time": "04:24",
+            "full_route": [
+                {
+                    "station": "Goa",
+                    "arrival_time": "START",
+                    "departure_time": "17:36",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "20:59",
+                    "departure_time": "21:09",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "00:57",
+                    "departure_time": "01:07",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "04:24",
+                    "departure_time": "04:34",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 328,
+            "total_seats": 40,
+            "available_seats": 14,
+            "rating": 4.4,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-4796",
+            "operator": "RSRTC",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Lucknow",
+            "source_departure_time": "16:54",
+            "destination_city": "Kochi",
+            "destination_arrival_time": "00:49",
+            "full_route": [
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "START",
+                    "departure_time": "16:54",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "19:20",
+                    "departure_time": "19:30",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "21:55",
+                    "departure_time": "22:05",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "00:49",
+                    "departure_time": "00:59",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 443,
+            "total_seats": 40,
+            "available_seats": 34,
+            "rating": 4.6,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-8374",
+            "operator": "IntrCity",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Patna",
+            "source_departure_time": "00:58",
+            "destination_city": "Agra",
+            "destination_arrival_time": "17:42",
+            "full_route": [
+                {
+                    "station": "Patna",
+                    "arrival_time": "START",
+                    "departure_time": "00:58",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "03:44",
+                    "departure_time": "03:54",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "07:15",
+                    "departure_time": "07:25",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "10:25",
+                    "departure_time": "10:35",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "14:04",
+                    "departure_time": "14:14",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "17:42",
+                    "departure_time": "17:52",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 351,
+            "total_seats": 40,
+            "available_seats": 7,
+            "rating": 4.6,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-6368",
+            "operator": "Hans Travels",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Hyderabad",
+            "source_departure_time": "18:08",
+            "destination_city": "Ahmedabad",
+            "destination_arrival_time": "05:40",
+            "full_route": [
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "START",
+                    "departure_time": "18:08",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "21:53",
+                    "departure_time": "22:03",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "01:48",
+                    "departure_time": "01:58",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "05:40",
+                    "departure_time": "05:50",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 273,
+            "total_seats": 40,
+            "available_seats": 32,
+            "rating": 4.7,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-2109",
+            "operator": "Orange Travels",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Hyderabad",
+            "source_departure_time": "14:33",
+            "destination_city": "Goa",
+            "destination_arrival_time": "23:50",
+            "full_route": [
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "START",
+                    "departure_time": "14:33",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "17:59",
+                    "departure_time": "18:09",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "21:06",
+                    "departure_time": "21:16",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Goa",
+                    "arrival_time": "23:50",
+                    "departure_time": "00:00",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 406,
+            "total_seats": 40,
+            "available_seats": 14,
+            "rating": 4.1,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-2928",
+            "operator": "Zingbus",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Goa",
+            "source_departure_time": "04:21",
+            "destination_city": "Dehradun",
+            "destination_arrival_time": "17:51",
+            "full_route": [
+                {
+                    "station": "Goa",
+                    "arrival_time": "START",
+                    "departure_time": "04:21",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "08:05",
+                    "departure_time": "08:15",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "11:34",
+                    "departure_time": "11:44",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "14:28",
+                    "departure_time": "14:38",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "17:51",
+                    "departure_time": "18:01",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 310,
+            "total_seats": 40,
+            "available_seats": 28,
+            "rating": 4.8,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-4871",
+            "operator": "RSRTC",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Amritsar",
+            "source_departure_time": "01:02",
+            "destination_city": "Haridwar",
+            "destination_arrival_time": "17:14",
+            "full_route": [
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "START",
+                    "departure_time": "01:02",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "03:35",
+                    "departure_time": "03:45",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "07:12",
+                    "departure_time": "07:22",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "10:47",
+                    "departure_time": "10:57",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "14:20",
+                    "departure_time": "14:30",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "17:14",
+                    "departure_time": "17:24",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 251,
+            "total_seats": 40,
+            "available_seats": 5,
+            "rating": 3.8,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-4567",
+            "operator": "RSRTC",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Bangalore",
+            "source_departure_time": "17:08",
+            "destination_city": "Jaipur",
+            "destination_arrival_time": "04:20",
+            "full_route": [
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "START",
+                    "departure_time": "17:08",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "19:38",
+                    "departure_time": "19:48",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "22:38",
+                    "departure_time": "22:48",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "01:38",
+                    "departure_time": "01:48",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "04:20",
+                    "departure_time": "04:30",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 426,
+            "total_seats": 40,
+            "available_seats": 36,
+            "rating": 4.6,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-7131",
+            "operator": "RSRTC",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Hyderabad",
+            "source_departure_time": "11:22",
+            "destination_city": "Delhi",
+            "destination_arrival_time": "21:35",
+            "full_route": [
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "START",
+                    "departure_time": "11:22",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "13:52",
+                    "departure_time": "14:02",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "16:28",
+                    "departure_time": "16:38",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "19:02",
+                    "departure_time": "19:12",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "21:35",
+                    "departure_time": "21:45",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 253,
+            "total_seats": 40,
+            "available_seats": 16,
+            "rating": 4.1,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-1860",
+            "operator": "Zingbus",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Lucknow",
+            "source_departure_time": "15:42",
+            "destination_city": "Ahmedabad",
+            "destination_arrival_time": "07:17",
+            "full_route": [
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "START",
+                    "departure_time": "15:42",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "18:35",
+                    "departure_time": "18:45",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "21:12",
+                    "departure_time": "21:22",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "00:43",
+                    "departure_time": "00:53",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "04:24",
+                    "departure_time": "04:34",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "07:17",
+                    "departure_time": "07:27",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 305,
+            "total_seats": 40,
+            "available_seats": 18,
+            "rating": 4.6,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-3396",
+            "operator": "Zingbus",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Kochi",
+            "source_departure_time": "17:07",
+            "destination_city": "Patna",
+            "destination_arrival_time": "07:51",
+            "full_route": [
+                {
+                    "station": "Kochi",
+                    "arrival_time": "START",
+                    "departure_time": "17:07",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chennai",
+                    "arrival_time": "19:43",
+                    "departure_time": "19:53",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "22:41",
+                    "departure_time": "22:51",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "01:19",
+                    "departure_time": "01:29",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "05:01",
+                    "departure_time": "05:11",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "07:51",
+                    "departure_time": "08:01",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 245,
+            "total_seats": 40,
+            "available_seats": 31,
+            "rating": 4.8,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-1733",
+            "operator": "UTC",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Udaipur",
+            "source_departure_time": "12:59",
+            "destination_city": "Haridwar",
+            "destination_arrival_time": "01:32",
+            "full_route": [
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "START",
+                    "departure_time": "12:59",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "15:46",
+                    "departure_time": "15:56",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "18:34",
+                    "departure_time": "18:44",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "22:30",
+                    "departure_time": "22:40",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "01:32",
+                    "departure_time": "01:42",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 332,
+            "total_seats": 40,
+            "available_seats": 22,
+            "rating": 4.0,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-1536",
+            "operator": "Zingbus",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Agra",
+            "source_departure_time": "00:28",
+            "destination_city": "Kochi",
+            "destination_arrival_time": "10:51",
+            "full_route": [
+                {
+                    "station": "Agra",
+                    "arrival_time": "START",
+                    "departure_time": "00:28",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "04:15",
+                    "departure_time": "04:25",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "08:12",
+                    "departure_time": "08:22",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "10:51",
+                    "departure_time": "11:01",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 386,
+            "total_seats": 40,
+            "available_seats": 5,
+            "rating": 4.4,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-5448",
+            "operator": "Zingbus",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Udaipur",
+            "source_departure_time": "17:06",
+            "destination_city": "Jaipur",
+            "destination_arrival_time": "03:02",
+            "full_route": [
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "START",
+                    "departure_time": "17:06",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "19:51",
+                    "departure_time": "20:01",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "23:41",
+                    "departure_time": "23:51",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "03:02",
+                    "departure_time": "03:12",
+                    "is_major_hub": false
+                }
+            ],
+            "price_per_segment": 389,
+            "total_seats": 40,
+            "available_seats": 35,
+            "rating": 4.8,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-7757",
+            "operator": "Zingbus",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Haridwar",
+            "source_departure_time": "11:35",
+            "destination_city": "Rishikesh",
+            "destination_arrival_time": "04:06",
+            "full_route": [
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "START",
+                    "departure_time": "11:35",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Delhi",
+                    "arrival_time": "14:52",
+                    "departure_time": "15:02",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "17:54",
+                    "departure_time": "18:04",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kochi",
+                    "arrival_time": "21:18",
+                    "departure_time": "21:28",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Udaipur",
+                    "arrival_time": "00:11",
+                    "departure_time": "00:21",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "04:06",
+                    "departure_time": "04:16",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 271,
+            "total_seats": 40,
+            "available_seats": 29,
+            "rating": 3.9,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-4651",
+            "operator": "UTC",
+            "bus_type": "Bharat Benz AC Seater",
+            "source_city": "Agra",
+            "source_departure_time": "01:52",
+            "destination_city": "Patna",
+            "destination_arrival_time": "11:30",
+            "full_route": [
+                {
+                    "station": "Agra",
+                    "arrival_time": "START",
+                    "departure_time": "01:52",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "05:33",
+                    "departure_time": "05:43",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Bangalore",
+                    "arrival_time": "08:55",
+                    "departure_time": "09:05",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Patna",
+                    "arrival_time": "11:30",
+                    "departure_time": "11:40",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 324,
+            "total_seats": 40,
+            "available_seats": 8,
+            "rating": 4.3,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-8474",
+            "operator": "Zingbus",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Dehradun",
+            "source_departure_time": "03:53",
+            "destination_city": "Hyderabad",
+            "destination_arrival_time": "16:13",
+            "full_route": [
+                {
+                    "station": "Dehradun",
+                    "arrival_time": "START",
+                    "departure_time": "03:53",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Rishikesh",
+                    "arrival_time": "07:21",
+                    "departure_time": "07:31",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Mumbai",
+                    "arrival_time": "09:52",
+                    "departure_time": "10:02",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "13:30",
+                    "departure_time": "13:40",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Hyderabad",
+                    "arrival_time": "16:13",
+                    "departure_time": "16:23",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 407,
+            "total_seats": 40,
+            "available_seats": 7,
+            "rating": 4.2,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-6098",
+            "operator": "Orange Travels",
+            "bus_type": "AC Sleeper (2+1)",
+            "source_city": "Haridwar",
+            "source_departure_time": "16:25",
+            "destination_city": "Jaipur",
+            "destination_arrival_time": "01:54",
+            "full_route": [
+                {
+                    "station": "Haridwar",
+                    "arrival_time": "START",
+                    "departure_time": "16:25",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "19:25",
+                    "departure_time": "19:35",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Amritsar",
+                    "arrival_time": "22:29",
+                    "departure_time": "22:39",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Jaipur",
+                    "arrival_time": "01:54",
+                    "departure_time": "02:04",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 283,
+            "total_seats": 40,
+            "available_seats": 11,
+            "rating": 4.4,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        },
+        {
+            "bus_id": "BUS-7384",
+            "operator": "Orange Travels",
+            "bus_type": "Volvo Multi-Axle AC",
+            "source_city": "Lucknow",
+            "source_departure_time": "07:56",
+            "destination_city": "Pune",
+            "destination_arrival_time": "00:08",
+            "full_route": [
+                {
+                    "station": "Lucknow",
+                    "arrival_time": "START",
+                    "departure_time": "07:56",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Chandigarh",
+                    "arrival_time": "11:46",
+                    "departure_time": "11:56",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Agra",
+                    "arrival_time": "14:32",
+                    "departure_time": "14:42",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Kolkata",
+                    "arrival_time": "17:18",
+                    "departure_time": "17:28",
+                    "is_major_hub": true
+                },
+                {
+                    "station": "Ahmedabad",
+                    "arrival_time": "20:23",
+                    "departure_time": "20:33",
+                    "is_major_hub": false
+                },
+                {
+                    "station": "Pune",
+                    "arrival_time": "00:08",
+                    "departure_time": "00:18",
+                    "is_major_hub": true
+                }
+            ],
+            "price_per_segment": 387,
+            "total_seats": 40,
+            "available_seats": 21,
+            "rating": 4.4,
+            "amenities": [
+                "WiFi",
+                "Water Bottle",
+                "Charging Point",
+                "Blanket",
+                "CCTV"
+            ]
+        }
+    ]
+}
