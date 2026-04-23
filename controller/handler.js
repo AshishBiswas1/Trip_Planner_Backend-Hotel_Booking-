@@ -25,15 +25,20 @@ exports.getAll = (Model) => {
   });
 };
 
-exports.getOne = (Model, popOptions) => {
+exports.getOne = (Model, popOptions, paramVal) => {
   return catchAsync(async (req, res, next) => {
-    let query = Model.findById(req.params.id);
+    let query;
+    if (paramVal === 'slug') {
+      query = Model.findOne({ slug: req.params[paramVal] });
+    } else if (paramVal === 'id') {
+      query = Model.findById(req.params[paramVal]);
+    }
     if (popOptions) query = query.populate(popOptions);
 
     const doc = await query;
 
     if (!doc) {
-      return next(new AppError('No document found with that ID', 404));
+      return next(new AppError('No document found', 404));
     }
 
     res.status(200).json({
