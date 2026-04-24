@@ -27,6 +27,11 @@ const tripSchema = new mongoose.Schema({
       lng: { type: Number, required: true }
     }
   },
+  travelMode: {
+    type: String,
+    enum: ['DRIVE', 'TWO_WHEELER', 'TRANSIT', 'WALK', 'BICYCLE'],
+    default: 'DRIVE'
+  },
   route: [
     {
       coordinates: { lat: Number, lng: Number }
