@@ -9,6 +9,7 @@ exports.createUserTrip = catchAsync(async (req, res, next) => {
     details: req.body.details,
     startDate: req.body.startDate,
     endDate: req.body.endDate,
+    travelMode: req.body.travelMode,
     startLocation: req.body.startLocation,
     endLocation: req.body.endLocation,
     route: req.body.route
