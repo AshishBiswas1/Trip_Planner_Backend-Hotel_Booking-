@@ -1,4 +1,5 @@
 const Booking = require('../models/bookingModel');
+const Hotel = require('../models/hotelModel');
 const Room = require('../models/roomModel');
 const Payment = require('../models/paymentModel');
 const catchAsync = require('../util/catchAsync');
@@ -14,6 +15,23 @@ const getPaymentReferenceFromWebhookPayload = (body) =>
 
 const getPaymentIdFromWebhookPayload = (body) =>
   body?.payload?.payment?.entity?.id || body?.razorpay_payment_id;
+
+const getPaymentMethodFromWebhookPayload = (body) =>
+  body?.payload?.payment?.entity?.method ||
+  body?.payload?.payment?.entity?.wallet ||
+  body?.payload?.payment?.entity?.notes?.paymentMethod ||
+  body?.payload?.payment_link?.entity?.notes?.paymentMethod;
+
+const normalizePaymentMethod = (method) => {
+  if (!method) return null;
+
+  const normalizedMethod = String(method).toLowerCase();
+  const allowedPaymentMethods = ['card', 'upi', 'netbanking'];
+
+  return allowedPaymentMethods.includes(normalizedMethod)
+    ? normalizedMethod
+    : null;
+};
 
 const getBookingIdFromWebhookPayload = (body) => {
   const referenceId =
@@ -169,6 +187,70 @@ exports.createBooking = catchAsync(async (req, res, next) => {
   return next();
 });
 
+exports.createTravelBooking = catchAsync(async (req, res, next) => {
+  const travelMode = req.body.travelMode;
+  const from = req.body.from;
+  const to = req.body.to;
+  const optionId = req.body.optionId;
+  const provider = req.body.provider;
+  const passengers = Number(req.body.passengers);
+  const totalPrice = Number(req.body.totalPrice);
+  const travelDate = new Date(req.body.travelDate);
+
+  if (!['flights', 'trains', 'buses'].includes(travelMode)) {
+    return next(new AppError('Please provide a valid travel mode.', 400));
+  }
+
+  if (!from || !to) {
+    return next(
+      new AppError('Please provide both origin and destination.', 400)
+    );
+  }
+
+  if (!optionId) {
+    return next(new AppError('Please provide a valid travel option id.', 400));
+  }
+
+  if (!Number.isInteger(passengers) || passengers < 1) {
+    return next(new AppError('Please provide a valid passenger count.', 400));
+  }
+
+  if (Number.isNaN(travelDate.getTime())) {
+    return next(new AppError('Please provide a valid travel date.', 400));
+  }
+
+  if (!Number.isFinite(totalPrice) || totalPrice <= 0) {
+    return next(new AppError('Please provide a valid total price.', 400));
+  }
+
+  const checkOutDate = addDaysToDate(travelDate, 1);
+
+  const booking = await Booking.create({
+    user: req.user.id,
+    bookingType: 'travel',
+    checkInDate: travelDate,
+    checkOutDate,
+    numberOfDays: 1,
+    numberOfGuests: passengers,
+    totalPrice,
+    status: 'pending',
+    isPaid: false,
+    specialRequests: req.body.specialRequests,
+    travelDetails: {
+      mode: travelMode,
+      optionId,
+      provider,
+      from,
+      to,
+      passengers,
+      travelDate
+    }
+  });
+
+  req.booking = booking;
+  return next();
+});
+
 exports.webhookSuccessBooking = catchAsync(async (req, res, next) => {
   verifyRazorpayWebhookSignature(req);
 
@@ -188,6 +270,13 @@ exports.webhookSuccessBooking = catchAsync(async (req, res, next) => {
   }
 
   // Update payment using instance and save() to trigger pre/post-save middleware
+  const webhookPaymentMethod = getPaymentMethodFromWebhookPayload(req.body);
+  const normalizedWebhookPaymentMethod =
+    normalizePaymentMethod(webhookPaymentMethod);
+  if (normalizedWebhookPaymentMethod) {
+    payment.paymentMethod = normalizedWebhookPaymentMethod;
+  }
+
   payment.status = 'completed';
   payment.transactionId = paymentId;
   payment.paymentLinkId =
@@ -201,15 +290,17 @@ exports.webhookSuccessBooking = catchAsync(async (req, res, next) => {
   await payment.save({ validateBeforeSave: false });
   // Post-save middleware automatically updates payment status
 
-  // Explicitly update booking status and payment flag
-  const booking = await Booking.findByIdAndUpdate(
-    payment.booking,
-    { status: 'confirmed', isPaid: true },
-    { returnDocument: 'after' }
-  );
+  // Explicitly update booking status and payment flag only for hotel bookings.
+  if (payment.booking) {
+    const booking = await Booking.findByIdAndUpdate(
+      payment.booking,
+      { status: 'confirmed', isPaid: true },
+      { returnDocument: 'after' }
+    );
 
-  if (!booking) {
-    return next(new AppError('No booking found for this payment', 404));
+    if (!booking) {
+      return next(new AppError('No booking found for this payment', 404));
+    }
   }
 
   res.status(200).json({
@@ -243,6 +334,13 @@ exports.webhookFailedBooking = catchAsync(async (req, res, next) => {
     req.body?.failureReason ||
     'Payment failed';
 
+  const webhookPaymentMethod = getPaymentMethodFromWebhookPayload(req.body);
+  const normalizedWebhookPaymentMethod =
+    normalizePaymentMethod(webhookPaymentMethod);
+  if (normalizedWebhookPaymentMethod) {
+    payment.paymentMethod = normalizedWebhookPaymentMethod;
+  }
+
   payment.transactionId = paymentId || payment.transactionId;
   payment.paymentLinkId =
     req.body?.payload?.payment?.entity?.payment_link_id ||
@@ -254,15 +352,17 @@ exports.webhookFailedBooking = catchAsync(async (req, res, next) => {
   await payment.markAsFailed(failureReason);
   // Post-save middleware automatically updates payment status
 
-  // Explicitly update booking status and payment flag
-  const booking = await Booking.findByIdAndUpdate(
-    payment.booking,
-    { status: 'cancelled', isPaid: false },
-    { returnDocument: 'after' }
-  );
+  // Explicitly update booking status and payment flag only for hotel bookings.
+  if (payment.booking) {
+    const booking = await Booking.findByIdAndUpdate(
+      payment.booking,
+      { status: 'cancelled', isPaid: false },
+      { returnDocument: 'after' }
+    );
 
-  if (!booking) {
-    return next(new AppError('No booking found for this payment', 404));
+    if (!booking) {
+      return next(new AppError('No booking found for this payment', 404));
+    }
   }
 
   res.status(200).json({
@@ -307,6 +407,39 @@ exports.getFailedBookings = catchAsync(async (req, res, next) => {
     status: 'success',
     results: bookings.length,
     data: {
+      bookings
+    }
+  });
+});
+
+exports.getAllHotelBookings = catchAsync(async (req, res, next) => {
+  const hotel = await Hotel.findById(req.params.hotelId).select('_id name');
+
+  if (!hotel) {
+    return next(new AppError('No hotel found with that ID', 404));
+  }
+
+  const startOfToday = new Date();
+  startOfToday.setHours(0, 0, 0, 0);
+
+  const endOfToday = new Date();
+  endOfToday.setHours(23, 59, 59, 999);
+
+  const bookings = await Booking.find({
+    hotel: hotel._id,
+    bookingType: 'hotel',
+    status: { $in: ['pending', 'confirmed'] },
+    checkInDate: {
+      $gte: startOfToday,
+      $lte: endOfToday
+    }
+  }).sort('checkInDate');
+
+  res.status(200).json({
+    status: 'success',
+    results: bookings.length,
+    data: {
+      hotel,
       bookings
     }
   });

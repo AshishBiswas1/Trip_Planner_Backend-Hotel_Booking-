@@ -2,6 +2,11 @@ const mongoose = require('mongoose');
 
 const bookingSchema = new mongoose.Schema(
   {
+    bookingType: {
+      type: String,
+      enum: ['hotel', 'travel'],
+      default: 'hotel'
+    },
     user: {
       type: mongoose.Schema.ObjectId,
       ref: 'User',
@@ -10,7 +15,9 @@ const bookingSchema = new mongoose.Schema(
     hotel: {
       type: mongoose.Schema.ObjectId,
       ref: 'Hotel',
-      required: true
+      required: function () {
+        return this.bookingType === 'hotel';
+      }
     },
     trip: {
       type: mongoose.Schema.ObjectId,
@@ -19,7 +26,9 @@ const bookingSchema = new mongoose.Schema(
     room: {
       type: mongoose.Schema.ObjectId,
       ref: 'Room',
-      required: true
+      required: function () {
+        return this.bookingType === 'hotel';
+      }
     },
     checkInDate: {
       type: Date,
@@ -50,6 +59,18 @@ const bookingSchema = new mongoose.Schema(
     payment: { type: mongoose.Schema.ObjectId, ref: 'Payment' },
     isPaid: { type: Boolean, default: false },
     specialRequests: { type: String },
+    travelDetails: {
+      mode: {
+        type: String,
+        enum: ['flights', 'trains', 'buses']
+      },
+      optionId: String,
+      provider: String,
+      from: String,
+      to: String,
+      passengers: Number,
+      travelDate: Date
+    },
     createdAt: { type: Date, default: Date.now }
   },
   {
@@ -77,6 +98,13 @@ bookingSchema.pre(/^find/, function () {
 
 // 2. Auto-fill total price from selected room price and stay duration
 bookingSchema.pre('validate', async function () {
+  if (this.bookingType === 'travel') {
+    if (!Number.isFinite(this.totalPrice) || this.totalPrice <= 0) {
+      throw new Error('Travel booking must include a valid total price');
+    }
+    return;
+  }
+
   if (!this.room) throw new Error('A booking must include a room');
   if (!Number.isInteger(this.numberOfDays) || this.numberOfDays < 1) {
     throw new Error('A booking must include a valid number of days');

@@ -36,6 +36,18 @@ exports.register = catchAsync(async (req, res, next) => {
   createSendToken(newUser, 201, res);
 });
 
+/*-----------------Hotel Registration-----------------*/
+exports.staffRegistration = catchAsync(async (req, res, next) => {
+  const staff = await User.create({
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
+    confirmPassword: req.body.confirmPassword,
+    role: 'staff'
+  });
+  createSendToken(staff, 201, res);
+});
+
 /*-----------------User Login-----------------*/
 exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
@@ -51,6 +63,23 @@ exports.login = catchAsync(async (req, res, next) => {
   }
 
   createSendToken(user, 200, res);
+});
+
+/*-----------------Staff Login-----------------*/
+exports.staffLogin = catchAsync(async (req, res, next) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return next(new AppError('Please provide email and password', 400));
+  }
+
+  const staff = await User.findOne({ email }).select('+password');
+
+  if (!staff || !(await staff.correctPassword(password, staff.password))) {
+    return next(new AppError('Incorrect email or password', 401));
+  }
+
+  createSendToken(staff, 200, res);
 });
 
 /*-----------------User Logout-----------------*/
