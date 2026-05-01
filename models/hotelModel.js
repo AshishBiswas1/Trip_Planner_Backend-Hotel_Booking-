@@ -7,6 +7,11 @@ const hotelSchema = new mongoose.Schema(
       required: true,
       trim: true
     },
+    user: {
+      type: mongoose.Schema.ObjectId,
+      ref: 'User',
+      required: [true, 'Hotel must belong to a user']
+    },
     slug: String, // Likely provided by your CMS
     description: String,
     location: {

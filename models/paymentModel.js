@@ -10,17 +10,28 @@ const paymentSchema = new mongoose.Schema(
     booking: {
       type: mongoose.Schema.ObjectId,
       ref: 'Booking',
-      required: true
+      required: function () {
+        return this.paymentCategory === 'hotel';
+      }
+    },
+    paymentCategory: {
+      type: String,
+      enum: ['hotel', 'travel'],
+      default: 'hotel'
     },
     hotel: {
       type: mongoose.Schema.ObjectId,
       ref: 'Hotel',
-      required: true
+      required: function () {
+        return this.paymentCategory === 'hotel';
+      }
     },
     room: {
       type: mongoose.Schema.ObjectId,
       ref: 'Room',
-      required: true
+      required: function () {
+        return this.paymentCategory === 'hotel';
+      }
     },
     amount: {
       type: Number,
@@ -44,7 +55,14 @@ const paymentSchema = new mongoose.Schema(
     paymentIntentId: String,
     paymentLinkId: String,
     paymentOrderId: String,
-    failureReason: String
+    failureReason: String,
+    travelMeta: {
+      mode: {
+        type: String,
+        enum: ['flights', 'trains', 'buses']
+      },
+      optionId: String
+    }
   },
   {
     timestamps: true,
@@ -75,6 +93,8 @@ paymentSchema.pre('save', function () {
 // Automatically update the associated Booking status when a payment is successful
 paymentSchema.post('save', async function (doc) {
   try {
+    if (!doc.booking) return;
+
     if (doc.status === 'completed') {
       await mongoose.model('Booking').findByIdAndUpdate(doc.booking, {
         paymentStatus: 'paid',

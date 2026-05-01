@@ -5,7 +5,7 @@ const catchAsync = require('../util/catchAsync');
 exports.getAll = (Model) => {
   return catchAsync(async (req, res, next) => {
     let filter = {};
-    if (req.params.hotelId) filter = { hotel: req.params.hoteld };
+    if (req.params.hoteId) filter = { hotel: req.params.hoteId };
 
     const features = new apiFeatures(Model.find(filter), req.query)
       .filter()
@@ -14,7 +14,6 @@ exports.getAll = (Model) => {
       .paginate();
     const doc = await features.query;
 
-    // SEND RESPONSE
     res.status(200).json({
       status: 'success',
       result: doc.length,
@@ -66,7 +65,7 @@ exports.createOne = (Model) => {
 exports.updateOne = (Model) => {
   return catchAsync(async (req, res, next) => {
     const doc = await Model.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
+      returnDocument: 'after',
       runValidators: true
     });
 
