@@ -132,7 +132,7 @@ bookingSchema.statics.isRoomAvailable = async function (
 ) {
   const overlap = await this.findOne({
     room: roomId,
-    status: 'confirmed',
+    status: { $in: ['pending', 'confirmed'] },
     $or: [
       {
         checkInDate: { $lt: new Date(checkOut) },

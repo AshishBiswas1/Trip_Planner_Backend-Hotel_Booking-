@@ -7,37 +7,19 @@ const roomSchema = new mongoose.Schema(
       ref: 'Hotel',
       required: [true, 'A room must belong to a hotel']
     },
-    roomNumber: {
-      type: String,
-      required: true
-    },
+    roomNumber: { type: String, required: true },
     roomType: {
       type: String,
       required: [true, 'Room must have a type'],
       enum: ['Single', 'Double', 'Suite', 'Deluxe']
     },
-    price: {
-      type: Number,
-      required: [true, 'Room must have a price']
-    },
-    capacity: {
-      type: Number,
-      required: true
-    },
+    price: { type: Number, required: [true, 'Room must have a price'] },
+    capacity: { type: Number, required: true },
     amenities: [String],
     images: [String],
-    isBooked: {
-      type: Boolean,
-      default: false
-    },
-    isActive: {
-      type: Boolean,
-      default: true
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now
-    }
+    isBooked: { type: Boolean, default: false },
+    isActive: { type: Boolean, default: true },
+    createdAt: { type: Date, default: Date.now }
   },
   {
     toJSON: { virtuals: true },
@@ -45,65 +27,73 @@ const roomSchema = new mongoose.Schema(
   }
 );
 
-// --- INDEXES ---
-// Compound index for fast lookup of rooms within a specific hotel
 roomSchema.index({ hotel: 1, roomNumber: 1 }, { unique: true });
-// Index for filtering by price and type
 roomSchema.index({ price: 1, roomType: 1 });
 
-// --- STATIC METHODS ---
-// This function calculates and updates the hotel's available room count
+// --- FIXED STATIC METHOD ---
 roomSchema.statics.updateAvailableRooms = async function (hotelId) {
+  if (!hotelId) return;
+
+  // FIX: Aggregation requires an actual ObjectId, not a string.
+  const targetId = new mongoose.Types.ObjectId(hotelId.toString());
+
   const stats = await this.aggregate([
-    { $match: { hotel: hotelId, isBooked: false, isActive: true } },
-    { $count: 'availableCount' }
+    {
+      $match: {
+        hotel: targetId,
+        isBooked: false,
+        isActive: true
+      }
+    },
+    {
+      $group: {
+        _id: '$hotel',
+        nRooms: { $sum: 1 }
+      }
+    }
   ]);
 
-  const count = stats.length > 0 ? stats[0].availableCount : 0;
+  const count = stats.length > 0 ? stats[0].nRooms : 0;
 
-  // Assuming your Hotel model has a field 'availableRooms'
+  // Update the Hotel document
   await mongoose.model('Hotel').findByIdAndUpdate(hotelId, {
-    availableRooms: count
+    roomsAvailable: count
   });
 };
 
-// --- INSTANCE METHODS ---
-// Check if room is currently available
-roomSchema.methods.checkAvailability = function () {
-  return this.isActive && !this.isBooked;
-};
+// --- FIXED MIDDLEWARE ---
 
-// --- MIDDLEWARE ---
-
-// Pre-save: Logic before saving (e.g., logging or formatting)
-roomSchema.pre('save', function (next) {
-  // Example: Ensure room numbers are always uppercase
-  this.roomNumber = this.roomNumber.toUpperCase();
-  next();
+// Pre-save: Async version fixes the "next is not a function" error
+roomSchema.pre('save', async function () {
+  if (this.roomNumber) {
+    this.roomNumber = this.roomNumber.toUpperCase();
+  }
 });
 
-// Post-save: Trigger count update after a room is created or updated
-roomSchema.post('save', function () {
-  // Use the constructor to access the static method
-  this.constructor.updateAvailableRooms(this.hotel);
+// Post-save: Update count after single room creation
+roomSchema.post('save', async function (doc) {
+  if (doc) {
+    await doc.constructor.updateAvailableRooms(doc.hotel);
+  }
 });
 
-// Post-remove: Trigger count update after a room is deleted
-roomSchema.post('remove', function () {
-  this.constructor.updateAvailableRooms(this.hotel);
-});
-
-// --- REAL-TIME BOOKING SYNC ---
-/* Note: If you update 'isBooked' using findByIdAndUpdate, 
-   the 'save' middleware won't trigger. Use this post-hook 
-   for findOneAndUpdate to catch booking changes.
-*/
+// Post-query: Update count after room update (Booking/Cancel)
 roomSchema.post(/^findOneAnd/, async function (doc) {
   if (doc) {
     await doc.constructor.updateAvailableRooms(doc.hotel);
   }
 });
 
-const Room = mongoose.model('Room', roomSchema);
+// Post-delete: Update count after room deletion
+roomSchema.post(
+  'deleteOne',
+  { document: true, query: false },
+  async function (doc) {
+    if (doc) {
+      await doc.constructor.updateAvailableRooms(doc.hotel);
+    }
+  }
+);
 
+const Room = mongoose.model('Room', roomSchema);
 module.exports = Room;

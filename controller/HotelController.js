@@ -2,6 +2,8 @@ const Hotel = require('../models/hotelModel');
 const AppError = require('../util/appError');
 const catchAsync = require('../util/catchAsync');
 const handeler = require('./handler');
+const { upload } = require('../util/upload');
+const { uploadBufferToCloudinary } = require('../util/cloudinary');
 
 exports.getAllHotels = handeler.getAll(Hotel);
 
@@ -81,7 +83,73 @@ exports.getHotelByDistance = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.createHotel = handeler.createOne(Hotel);
+exports.uploadHotelImages = upload.array('images', 10);
+
+exports.uploadHotelImagesToCloudinary = catchAsync(async (req, res, next) => {
+  if (!req.files || req.files.length === 0) return next();
+
+  const uploads = await Promise.all(
+    req.files.map((file, index) =>
+      uploadBufferToCloudinary(
+        file.buffer,
+        {
+          public_id: `hotel-${req.user.id}-${Date.now()}-${index}`,
+          transformation: [
+            { width: 1600, height: 900, crop: 'limit' },
+            { quality: 'auto', fetch_format: 'auto' }
+          ]
+        },
+        file.mimetype
+      )
+    )
+  );
+
+  req.uploadedHotelImages = uploads.map((item) => item.secure_url);
+  next();
+});
+
+const normalizeImages = (value) => {
+  if (!value) return [];
+  if (Array.isArray(value)) return value.filter(Boolean);
+  if (typeof value === 'string') {
+    return value
+      .split(',')
+      .map((entry) => entry.trim())
+      .filter(Boolean);
+  }
+  return [];
+};
+
+exports.createHotel = catchAsync(async (req, res, next) => {
+  if (req.user.role === 'staff') {
+    const existingHotel = await Hotel.findOne({ user: req.user.id });
+
+    if (existingHotel) {
+      return next(
+        new AppError('A hotel is already assigned to this staff account.', 400)
+      );
+    }
+
+    // Staff cannot assign hotels to any other user.
+    req.body.user = req.user.id;
+  }
+
+  const bodyImages = normalizeImages(req.body.images);
+  const uploadedImages = req.uploadedHotelImages || [];
+
+  if (uploadedImages.length > 0 || bodyImages.length > 0) {
+    req.body.images = [...new Set([...bodyImages, ...uploadedImages])];
+  }
+
+  const hotel = await Hotel.create(req.body);
+
+  res.status(201).json({
+    status: 'success',
+    data: {
+      data: hotel
+    }
+  });
+});
 
 exports.setStaffId = (req, res, next) => {
   if (req.user.role === 'staff') {
@@ -91,9 +159,33 @@ exports.setStaffId = (req, res, next) => {
 };
 
 exports.updateHotel = catchAsync(async (req, res, next) => {
+  const existingHotel = await Hotel.findOne({ user: req.params.id });
+
+  if (!existingHotel) {
+    return next(new AppError('No hotel found with that ID', 404));
+  }
+
+  const bodyImages = normalizeImages(req.body.images);
+  const uploadedImages = req.uploadedHotelImages || [];
+  const shouldReplaceImages = req.body.replaceImages === 'true';
+
+  const updatePayload = {
+    ...req.body
+  };
+
+  delete updatePayload.replaceImages;
+
+  if (uploadedImages.length > 0 || bodyImages.length > 0) {
+    const baseImages = shouldReplaceImages
+      ? bodyImages
+      : [...normalizeImages(existingHotel.images), ...bodyImages];
+
+    updatePayload.images = [...new Set([...baseImages, ...uploadedImages])];
+  }
+
   const hotel = await Hotel.findOneAndUpdate(
     { user: req.params.id },
-    req.body,
+    updatePayload,
     {
       new: true,
       runValidators: true

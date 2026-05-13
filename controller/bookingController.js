@@ -413,33 +413,59 @@ exports.getFailedBookings = catchAsync(async (req, res, next) => {
 });
 
 exports.getAllHotelBookings = catchAsync(async (req, res, next) => {
-  const hotel = await Hotel.findById(req.params.hotelId).select('_id name');
+  console.log(
+    'Accessing getAllHotelBookings with hotel ID:',
+    req.params.hotelId
+  );
+  const hotel = await Hotel.findById(req.params.hotelId);
 
   if (!hotel) {
     return next(new AppError('No hotel found with that ID', 404));
   }
 
-  const startOfToday = new Date();
-  startOfToday.setHours(0, 0, 0, 0);
+  console.log('Hotel user:', hotel.user);
+  console.log('Requesting user ID:', req.user._id);
 
-  const endOfToday = new Date();
-  endOfToday.setHours(23, 59, 59, 999);
+  // Staff can only access bookings for their own hotel
+  if (
+    req.user.role === 'staff' &&
+    hotel.user.toString() !== req.user._id.toString()
+  ) {
+    return next(
+      new AppError(
+        'You do not have permission to access this hotel bookings.',
+        403
+      )
+    );
+  }
 
+  // Fetch all bookings for the hotel (not filtered by date)
   const bookings = await Booking.find({
     hotel: hotel._id,
     bookingType: 'hotel',
-    status: { $in: ['pending', 'confirmed'] },
-    checkInDate: {
-      $gte: startOfToday,
-      $lte: endOfToday
-    }
-  }).sort('checkInDate');
+    status: { $in: ['pending', 'confirmed'] }
+  })
+    .populate('user', 'name email')
+    .populate('room', 'roomNumber roomType price')
+    .sort('-checkInDate');
 
   res.status(200).json({
     status: 'success',
     results: bookings.length,
     data: {
       hotel,
+      bookings
+    }
+  });
+});
+
+exports.getMyBookings = catchAsync(async (req, res, next) => {
+  const bookings = await Booking.find({ user: req.user.id }).sort('-createdAt');
+
+  res.status(200).json({
+    status: 'success',
+    results: bookings.length,
+    data: {
       bookings
     }
   });
