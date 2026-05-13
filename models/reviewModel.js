@@ -21,8 +21,7 @@ const reviewSchema = new mongoose.Schema(
       set: (val) => Math.round(val * 10) / 10
     },
     comment: {
-      type: String,
-      required: [true, 'Review must have a comment']
+      type: String
     }
   },
   {
@@ -68,9 +67,8 @@ reviewSchema.post('save', function () {
   this.constructor.calcAverageRatings(this.hotel);
 });
 
-reviewSchema.pre(/^findOneAnd/, async function (next) {
-  this.reviewDoc = await this.findOne();
-  next();
+reviewSchema.pre(/^findOneAnd/, async function () {
+  this.reviewDoc = await this.clone().findOne();
 });
 
 reviewSchema.post(/^findOneAnd/, async function () {

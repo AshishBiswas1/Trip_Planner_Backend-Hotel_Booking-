@@ -1,6 +1,7 @@
 const Razorpay = require('razorpay');
 const Booking = require('../models/bookingModel');
 const Payment = require('../models/paymentModel');
+const Hotel = require('../models/hotelModel');
 const catchAsync = require('../util/catchAsync');
 const AppError = require('../util/appError');
 const crypto = require('crypto');
@@ -503,5 +504,65 @@ exports.webhookFailedTravelPayment = catchAsync(async (req, res, next) => {
   res.status(200).json({
     status: 'success',
     message: 'Travel payment failure processed'
+  });
+});
+
+exports.getMyPayments = catchAsync(async (req, res, next) => {
+  const payments = await Payment.find({ user: req.user.id })
+    .sort('-createdAt')
+    .populate({
+      path: 'booking',
+      select:
+        'bookingType status totalPrice checkInDate checkOutDate travelDetails hotel room'
+    })
+    .populate({ path: 'hotel', select: 'name location slug' })
+    .populate({ path: 'room', select: 'roomNumber type' });
+
+  res.status(200).json({
+    status: 'success',
+    results: payments.length,
+    data: {
+      payments
+    }
+  });
+});
+
+exports.getHotelPayments = catchAsync(async (req, res, next) => {
+  const hotel = await Hotel.findById(req.params.hotelId);
+
+  if (!hotel) {
+    return next(new AppError('No hotel found with that ID', 404));
+  }
+
+  // Staff can only access payments for their own hotel
+  if (
+    req.user.role === 'staff' &&
+    hotel.user.toString() !== req.user._id.toString()
+  ) {
+    return next(
+      new AppError(
+        'You do not have permission to access this hotel payments.',
+        403
+      )
+    );
+  }
+
+  // Fetch all payments for bookings at this hotel
+  const payments = await Payment.find({ hotel: hotel._id })
+    .sort('-createdAt')
+    .populate({
+      path: 'booking',
+      select: 'bookingType status totalPrice checkInDate checkOutDate user room'
+    })
+    .populate({ path: 'user', select: 'name email' })
+    .populate({ path: 'room', select: 'roomNumber roomType' });
+
+  res.status(200).json({
+    status: 'success',
+    results: payments.length,
+    data: {
+      hotel,
+      payments
+    }
   });
 });

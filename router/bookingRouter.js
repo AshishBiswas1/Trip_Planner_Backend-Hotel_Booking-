@@ -3,10 +3,12 @@ const bookingController = require('../controller/bookingController');
 const paymentController = require('../controller/paymentController');
 const authController = require('../controller/authController');
 
+// mergeParams is essential to capture :hotelId from the parent router
 const router = express.Router({ mergeParams: true });
 
-// WEBHOOK ROUTES (public)
-// Booking webhooks
+// --- PUBLIC WEBHOOK ROUTES ---
+// These MUST stay at the top and usually should NOT have authController.protect
+// because they are called by Razorpay/Stripe servers, not logged-in users.
 router.post(
   '/webhook/booking/payment-success',
   bookingController.webhookSuccessBooking
@@ -15,7 +17,7 @@ router.post(
   '/webhook/booking/payment-failed',
   bookingController.webhookFailedBooking
 );
-// Single dispatch webhook (preferred): point Razorpay to these two endpoints.
+
 const webhookController = require('../controller/webhookController');
 router.post(
   '/webhook/dispatch/payment-success',
@@ -26,7 +28,6 @@ router.post(
   webhookController.dispatchFailure
 );
 
-// Travel webhooks
 router.post(
   '/webhook/travel/payment-success',
   paymentController.webhookSuccessTravelPayment
@@ -36,28 +37,49 @@ router.post(
   paymentController.webhookFailedTravelPayment
 );
 
-// Backward-compatible aliases for older Razorpay webhook settings
-router.post(
-  '/webhook/payment-success',
-  bookingController.webhookSuccessBooking
-);
-router.post('/webhook/payment-failed', bookingController.webhookFailedBooking);
+// --- PROTECTED ROUTES ---
+router.use(authController.protect);
 
-// GET the BOOKED ROOMS
+// GET /api/v1/hotel/:hotelId/bookings/
+// Also allow POST to the same nested path to create a booking (uses mergeParams.hotelId)
+router
+  .route('/')
+  .get(
+    authController.restrictTo('staff', 'admin'),
+    bookingController.getAllHotelBookings
+  )
+  .post(
+    authController.restrictTo('user', 'staff', 'admin'),
+    bookingController.createBooking,
+    paymentController.createPayment
+  );
+
+// User-specific routes
+router.route('/me').get(bookingController.getMyBookings);
+router.route('/my-payments').get(paymentController.getMyPayments);
+router
+  .route('/payments')
+  .get(
+    authController.restrictTo('staff', 'admin'),
+    paymentController.getHotelPayments
+  );
+
+// Booking success/fail pages
 router.route('/:tripId/success').get(bookingController.getSuccessfullBookings);
 router.route('/:tripId/failed').get(bookingController.getFailedBookings);
 
-router.use(authController.protect);
-
-// GET today's bookings for a specific hotel
-router.route('/').get(bookingController.getAllHotelBookings);
-
-// CREATE a TRAVEL PAYMENT LINK
+// Booking actions
 router.route('/book-travel').post(paymentController.createPayment);
 
-// CREATE the ROOM BOOKING
+// Note: If this is nested under /:hotelId/bookings,
+// this URL becomes /api/v1/hotel/:hotelId/bookings/book/:hotelId
+// You might want to simplify this to just '/book'
 router
   .route('/book/:hotelId')
-  .post(bookingController.createBooking, paymentController.createPayment);
+  .post(
+    authController.restrictTo('user', 'staff', 'admin'),
+    bookingController.createBooking,
+    paymentController.createPayment
+  );
 
 module.exports = router;

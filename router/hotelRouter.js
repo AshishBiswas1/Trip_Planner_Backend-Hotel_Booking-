@@ -1,54 +1,60 @@
 const express = require('express');
 const hotelController = require('../controller/HotelController');
 const roomRouter = require('./roomRouter');
+const reviewRouter = require('./reviewRouter');
 const bookingRouter = require('./bookingRouter');
 const authController = require('../controller/authController');
 
 const router = express.Router({ mergeParams: true });
 
-// Forward room-related requests to the nested room router
+// 1. NESTED ROUTES
+// These should stay at the top to ensure specific sub-resources are caught first
+router.use('/:hotelId/bookings', bookingRouter);
 router.use('/:hotelId/rooms', roomRouter);
+router.use('/:hotelId/reviews', reviewRouter);
 
-// Retrieve all available hotels (Public)
+// 2. PUBLIC ROUTES (Static & Fixed Paths)
 router.route('/').get(hotelController.getAllHotels);
-
-// Search for hotels based on geographical distance (Public)
 router.route('/nearby').get(hotelController.getHotelByDistance);
 
-// Retrieve a specific hotel using its slug (Public - moved above protect)
-router.route('/:slug').get(hotelController.getHotel);
-
-// Protect all following routes with authentication middleware
-router.use(authController.protect);
-
-// Forward hotel bookings requests to the booking router with role restrictions
-router.use(
-  '/:hotelId/bookings',
-  authController.restrictTo('staff', 'admin'),
-  bookingRouter
-);
-
-// --- STAFF ROUTES (Accessible ONLY by Staff) ---
-
-// Fetch the hotel belonging to the logged-in staff member
+// 3. LOGGED-IN STAFF SPECIFIC (Static Path)
+// Placed BEFORE /:slug to prevent "getMyHotel" being treated as a slug
 router
   .route('/getMyHotel')
   .get(
+    authController.protect,
     authController.restrictTo('staff'),
     hotelController.setStaffId,
     hotelController.getMyHotel
   );
 
-// Update the hotel owned by the logged-in staff member
+// 4. PUBLIC DYNAMIC ROUTES (Slugs)
+// This is the "catch-all" for hotel details.
+router.route('/:slug').get(hotelController.getHotel);
+
+// 5. PROTECTED ROUTES (Requires Authentication)
+router.use(authController.protect);
+
+router
+  .route('/create')
+  .post(
+    authController.restrictTo('staff', 'admin'),
+    hotelController.uploadHotelImages,
+    hotelController.uploadHotelImagesToCloudinary,
+    hotelController.createHotel
+  );
+
+// --- STAFF ONLY ROUTES ---
 router
   .route('/updateMyHotel')
   .patch(
     authController.restrictTo('staff'),
     hotelController.setStaffId,
+    hotelController.uploadHotelImages,
+    hotelController.uploadHotelImagesToCloudinary,
     hotelController.updateHotel
   );
 
-// Update/add/remove amenities for the logged-in staff member's hotel
 router
   .route('/updateMyHotelAmenities')
   .patch(
@@ -57,7 +63,6 @@ router
     hotelController.updateHotlelAmenities
   );
 
-// Delete the hotel owned by the logged-in staff member
 router
   .route('/deleteMyHotel')
   .delete(
@@ -66,21 +71,19 @@ router
     hotelController.deleteHotel
   );
 
-// --- ADMIN ROUTES (Accessible ONLY by Admins) ---
-
-// Restrict all following routes to admin users only
+// --- ADMIN ONLY ROUTES ---
 router.use(authController.restrictTo('admin'));
 
-// Create a new hotel entry
-router.route('/create').post(hotelController.createHotel);
+// ID-based routes should be at the bottom as they are highly generic
+router
+  .route('/:id')
+  .patch(
+    hotelController.uploadHotelImages,
+    hotelController.uploadHotelImagesToCloudinary,
+    hotelController.updateHotel
+  )
+  .delete(hotelController.deleteHotel);
 
-// Update a specific hotel using its unique ID
-router.route('/:id').patch(hotelController.updateHotel);
-
-// Update/add/remove amenities for a specific hotel using its unique ID
 router.route('/:id/amenities').patch(hotelController.updateHotlelAmenities);
-
-// Delete a specific hotel using its unique ID
-router.route('/:id').delete(hotelController.deleteHotel);
 
 module.exports = router;

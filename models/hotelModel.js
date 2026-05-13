@@ -2,17 +2,13 @@ const mongoose = require('mongoose');
 
 const hotelSchema = new mongoose.Schema(
   {
-    name: {
-      type: String,
-      required: true,
-      trim: true
-    },
+    name: { type: String, required: true, trim: true },
     user: {
       type: mongoose.Schema.ObjectId,
       ref: 'User',
       required: [true, 'Hotel must belong to a user']
     },
-    slug: String, // Likely provided by your CMS
+    slug: String,
     description: String,
     location: {
       address: String,
@@ -20,34 +16,24 @@ const hotelSchema = new mongoose.Schema(
       state: String,
       country: String,
       coordinates: {
-        type: {
-          type: String,
-          enum: ['Point'],
-          default: 'Point'
-        },
-        coordinates: [Number] // [longitude, latitude]
+        type: { type: String, enum: ['Point'], default: 'Point' },
+        coordinates: [Number]
       }
     },
     images: [String],
     rating: Number,
     totalReviews: Number,
-    roomsAvailable: Number,
-    amenities: [String], // Added for better "Single Hotel" details
-    featured: {
-      type: Boolean,
-      default: false
-    }
+    roomsAvailable: { type: Number, default: 0 },
+    amenities: [String],
+    featured: { type: Boolean, default: false }
   },
   {
-    // Ensures virtuals are included when sending JSON to the frontend
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
-    timestamps: false // CMS handles this, usually not needed for read-only
+    timestamps: false
   }
 );
 
-// --- PERFORMANCE INDEXING ---
-// Essential for fast "Get All" and "Single" fetches
 hotelSchema.index({ slug: 1 });
 hotelSchema.index({ 'location.city': 1 });
 hotelSchema.index({ 'location.coordinates': '2dsphere' });
@@ -56,25 +42,30 @@ hotelSchema.virtual('isBookable').get(function () {
   return this.roomsAvailable > 0;
 });
 
-// --- QUERY MIDDLEWARE ---
-// Automatically populate or filter every time you fetch a hotel
-hotelSchema.pre(/^find/, function () {
-  // To hide hotels with 0 rooms from all results:
-  this.find({ roomsAvailable: { $gt: 0 } });
+// --- FIXED QUERY MIDDLEWARE ---
+hotelSchema.pre(/^find/, async function () {
+  const query = this.getQuery();
 
+  // 1. Identify the query context
+  const isSpecificId = query._id;
+  const hasUserFilter = Object.prototype.hasOwnProperty.call(query, 'user');
+  const hasRoomsFilter = Object.prototype.hasOwnProperty.call(
+    query,
+    'roomsAvailable'
+  );
+
+  // 2. Apply discoverability filter ONLY for general public searches
+  if (!isSpecificId && !hasUserFilter && !hasRoomsFilter) {
+    this.find({ roomsAvailable: { $gt: 0 } });
+  }
+
+  // 3. Store start time for performance logging
   this.start = Date.now();
 });
 
-hotelSchema.post(/^find/, function (docs) {
+hotelSchema.post(/^find/, function () {
   console.log(`Read Operation took ${Date.now() - this.start}ms`);
 });
 
-// --- STATIC METHODS ---
-// Useful for specific "Get All" logic like top deals or city searches
-hotelSchema.statics.findByCity = function (city) {
-  return this.find({ 'location.city': new RegExp(city, 'i') });
-};
-
 const Hotel = mongoose.model('Hotel', hotelSchema);
-
 module.exports = Hotel;

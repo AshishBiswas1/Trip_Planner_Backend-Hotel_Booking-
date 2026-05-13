@@ -10,6 +10,10 @@ router
   .post(tripController.createUserTrip, tripController.sendCreatedTrip)
   .get(tripController.getUserTrips);
 
-router.route('/:id').get(tripController.getTrip);
+router
+  .route('/:id')
+  .get(tripController.getTrip)
+  .patch(tripController.updateTrip)
+  .delete(tripController.deleteTrip);
 
 module.exports = router;

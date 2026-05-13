@@ -25,6 +25,36 @@ exports.getAllReviews = catchAsync(async (req, res, next) => {
   });
 });
 
+exports.getAllHotelReviews = catchAsync(async (req, res, next) => {
+  if (!req.params.hotelId) {
+    return next(new AppError('Please provide a valid hotel ID', 400));
+  }
+
+  const reviews = await Review.find({ hotel: req.params.hotelId });
+
+  res.status(200).json({
+    status: 'success',
+    results: reviews.length,
+    data: {
+      reviews
+    }
+  });
+});
+
+exports.getMyReviews = catchAsync(async (req, res, next) => {
+  const reviews = await Review.find({ user: req.user.id })
+    .sort('-createdAt')
+    .populate({ path: 'hotel', select: 'name slug location' });
+
+  res.status(200).json({
+    status: 'success',
+    results: reviews.length,
+    data: {
+      reviews
+    }
+  });
+});
+
 exports.getReview = catchAsync(async (req, res, next) => {
   const review = await Review.findById(req.params.id)
     .populate({ path: 'user', select: 'name photo' })
@@ -43,23 +73,13 @@ exports.getReview = catchAsync(async (req, res, next) => {
 });
 
 exports.createReview = catchAsync(async (req, res, next) => {
-  if (!req.user) {
-    return next(
-      new AppError('You are not logged in! Please login first.', 401)
-    );
-  }
-
-  if (req.user.role !== 'user') {
-    return next(new AppError('Only users can submit reviews', 403));
-  }
-
-  if (!req.body.hotel) {
+  if (!req.params.hotelId) {
     return next(new AppError('Please provide a valid hotel ID', 400));
   }
 
   const review = await Review.create({
     user: req.user.id,
-    hotel: req.body.hotel,
+    hotel: req.params.hotelId,
     rating: req.body.rating,
     comment: req.body.comment
   });
@@ -73,16 +93,6 @@ exports.createReview = catchAsync(async (req, res, next) => {
 });
 
 exports.updateReview = catchAsync(async (req, res, next) => {
-  if (!req.user) {
-    return next(
-      new AppError('You are not logged in! Please login first.', 401)
-    );
-  }
-
-  if (req.user.role !== 'user') {
-    return next(new AppError('Only users can update their reviews', 403));
-  }
-
   const review = await Review.findById(req.params.id);
 
   if (!review) {
@@ -95,12 +105,13 @@ exports.updateReview = catchAsync(async (req, res, next) => {
     );
   }
 
+  const updateData = {};
+  if (req.body.rating !== undefined) updateData.rating = req.body.rating;
+  if (req.body.comment !== undefined) updateData.comment = req.body.comment;
+
   const updatedReview = await Review.findByIdAndUpdate(
     req.params.id,
-    {
-      rating: req.body.rating,
-      comment: req.body.comment
-    },
+    updateData,
     {
       new: true,
       runValidators: true
@@ -116,16 +127,6 @@ exports.updateReview = catchAsync(async (req, res, next) => {
 });
 
 exports.deleteReview = catchAsync(async (req, res, next) => {
-  if (!req.user) {
-    return next(
-      new AppError('You are not logged in! Please login first.', 401)
-    );
-  }
-
-  if (req.user.role !== 'user') {
-    return next(new AppError('Only users can delete their reviews', 403));
-  }
-
   const review = await Review.findById(req.params.id);
 
   if (!review) {

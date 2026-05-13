@@ -13,6 +13,25 @@ const handleDuplicateFieldsDB = (err) => {
   return new AppError(message, 400);
 };
 
+const handleDuplicateFieldsMongoDB = (err) => {
+  const fields = err.keyValue || {};
+  const keys = Object.keys(fields);
+
+  if (keys.length > 0) {
+    const key = keys[0];
+    const value = fields[key];
+    return new AppError(
+      `Duplicate field value: ${value} for ${key}. Please use a different value.`,
+      400
+    );
+  }
+
+  return new AppError(
+    'Duplicate field value. Please use a different value.',
+    400
+  );
+};
+
 const handleValidationErrorDB = (err) => {
   const errors = Object.values(err.errors || {}).map((el) => el.message);
   const message = `Invalid Input Data. ${errors.join('. ')}`;
@@ -59,14 +78,19 @@ module.exports = (err, req, res, next) => {
 
   if (process.env.NODE_ENV === 'development') {
     exports.sendDevError(err, req, res);
-  } else if (process.env.NODE_ENV === 'production') {
+  } else if (
+    process.env.NODE_ENV === 'production' ||
+    process.env.NODE_ENV === 'test'
+  ) {
     let error = { ...err };
     error.message = err.message;
     error.name = err.name;
     error.code = err.code;
     error.detail = err.detail;
+    error.keyValue = err.keyValue;
 
     if (error.code === '23505') error = handleDuplicateFieldsDB(error);
+    if (error.code === 11000) error = handleDuplicateFieldsMongoDB(error);
     if (error.name === 'ValidationError')
       error = handleValidationErrorDB(error);
     if (error.code === 'ECONNREFUSED')

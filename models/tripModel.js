@@ -29,7 +29,7 @@ const tripSchema = new mongoose.Schema({
   },
   travelMode: {
     type: String,
-    enum: ['DRIVE', 'TWO_WHEELER', 'TRANSIT', 'WALK', 'BICYCLE'],
+    enum: ['DRIVE', 'TWO_WHEELER', 'TRANSIT', 'WALK', 'BICYCLE', 'FLIGHT'],
     default: 'DRIVE'
   },
   route: [
@@ -53,13 +53,17 @@ const tripSchema = new mongoose.Schema({
 tripSchema.index({ user: 1, startDate: -1 });
 tripSchema.index({ 'startLocation.coordinates': '2dsphere' });
 
-// Pre-save: Calculate total cost
+// Pre-save: Calculate total cost from costBreakdown if modified
 tripSchema.pre('save', function () {
   if (this.isModified('costBreakdown')) {
-    this.totalCost = Object.values(this.costBreakdown).reduce(
-      (sum, cost) => sum + cost,
+    const calculatedTotal = Object.values(this.costBreakdown).reduce(
+      (sum, cost) => sum + (Number(cost) || 0),
       0
     );
+    // Only update totalCost if it wasn't explicitly set or if it's 0
+    if (!this.isModified('totalCost')) {
+      this.totalCost = calculatedTotal;
+    }
   }
 });
 
